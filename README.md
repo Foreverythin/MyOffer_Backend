@@ -1,2 +1,2 @@
 # MyOffer_Backend
-The back-end of the recruitment website: MyOffer.
+The back-end implementation of the recruitment website: MyOffer.
