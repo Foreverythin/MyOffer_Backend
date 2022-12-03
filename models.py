@@ -11,3 +11,19 @@ class Employee(db.Model):
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(200), nullable=False)
 
+
+# Define the Employer class, which is used to store employers' information
+class Employer(db.Model):
+    __tablename__ = 'employer'
+    uid = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    email = db.Column(db.String(100), nullable=False, unique=True)
+    password = db.Column(db.String(200), nullable=False)
+
+
+# Define the Captcha class, which is used to store the captcha
+class Captcha(db.Model):
+    __tablename__ = 'captcha'
+    captchaId = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    email = db.Column(db.String(100), nullable=False)
+    captcha = db.Column(db.String(10), nullable=False)
+    createdTime = db.Column(db.DateTime, nullable=False)
