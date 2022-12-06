@@ -10,6 +10,7 @@ class Employee(db.Model):
     uid = db.Column(db.Integer, primary_key=True, autoincrement=True)
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(200), nullable=False)
+    logged = db.Column(db.Boolean, nullable=False, default=False)
 
 
 # Define the Employer class, which is used to store employers' information
@@ -18,6 +19,7 @@ class Employer(db.Model):
     uid = db.Column(db.Integer, primary_key=True, autoincrement=True)
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(200), nullable=False)
+    logged = db.Column(db.Boolean, nullable=False, default=False)
 
 
 # Define the Captcha class, which is used to store the captcha

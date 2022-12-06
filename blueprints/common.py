@@ -1,10 +1,16 @@
 from flask import Blueprint, request, session, jsonify
 from flask_restful import Api, Resource, reqparse
+from flask_mail import Message
 from werkzeug.security import generate_password_hash, check_password_hash
 
+import string
+import random
+from datetime import datetime
+
 from forms import LoginForm, RegisterForm
-from models import Employer, Employee
+from models import Employer, Employee, Captcha
 from exts import db, mail
+from utils import generateToken, verifyToken
 
 bp = Blueprint('common', __name__, url_prefix='/')
 api = Api(bp)
@@ -21,13 +27,11 @@ loginParser = reqparse.RequestParser()
 loginParser.add_argument('email', type=str, required=True, help='email cannot be blank!')
 loginParser.add_argument('password', type=str, required=True, help='password cannot be blank!')
 
-# the parser is used to parse the request body when users are requiring a captcha
-captchaParser = reqparse.RequestParser()
-captchaParser.add_argument('email', type=str, required=True, help='email cannot be blank!')
-
 
 class Login(Resource):
     def post(self, userType):
+        # print the header of the request
+        print(request.headers)
         # json to form
         args = loginParser.parse_args()
         form = LoginForm()
@@ -40,8 +44,14 @@ class Login(Resource):
                 if employee is None:
                     return jsonify({'status': 400, 'msg': 'Account does not exist!'})
                 if check_password_hash(employee.password, form.password.data):
-                    session['employeeId'] = employee.uid
-                    return jsonify({'status': 200, 'msg': 'Successfully logged in!'})
+                    # generate a token
+                    token = str('employee:') + generateToken(employee.email)
+                    employee.logged = True
+                    try:
+                        db.session.commit()
+                    except Exception as e:
+                        return jsonify({'status': 403, 'msg': str(e)})
+                    return jsonify({'status': 200, 'msg': 'Successfully logged in!', 'token': (token)})
                 else:
                     return {'status': 401, 'msg': 'Invalid email or password!'}
             else:
@@ -49,8 +59,14 @@ class Login(Resource):
                 if employer is None:
                     return jsonify({'status': 400, 'msg': 'Account does not exist!'})
                 if check_password_hash(employer.password, form.password.data):
-                    session['employerId'] = employer.uid
-                    return jsonify({'status': 200, 'msg': 'Successfully logged in!'})
+                    # generate a token
+                    token = str('employer:') + generateToken(employer.email)
+                    employer.logged = True
+                    try:
+                        db.session.commit()
+                    except Exception as e:
+                        return jsonify({'status': 403, 'msg': str(e)})
+                    return jsonify({'status': 200, 'msg': 'Successfully logged in!', 'token': token})
                 else:
                     return {'status': 401, 'msg': 'Invalid email or password!'}
         else:
@@ -87,18 +103,53 @@ class Register(Resource):
             return jsonify({'status': 404, 'msg': 'Failed to register! ' + str(e)})
 
 
-
-
-
-
-
 class GetCaptcha(Resource):
+    def get(self):
+        print('i am here')
+        print(request.headers.get('Authorization'))
+        # get the parameters from the request
+        email = request.args.get('email')
+        User = Employee.query.filter_by(email=email).first()
+        if User:
+            return jsonify({'status': 405, 'msg': 'Account already exists as an identity of an employee!'})
+        User = Employer.query.filter_by(email=email).first()
+        if User:
+            return jsonify({'status': 405, 'msg': 'Account already exists as an identity of an employer!'})
+        letters = string.ascii_letters + string.digits  # Get all the letters and numbers.
+        captcha = "".join(random.sample(letters, 4))  # Generate a random captcha.
+        message = Message('Captcha', recipients=[email], body="The captcha is: " + captcha + ", just valid for 5 "
+                                                                                                "minutes.")
+
+        captchaModel = Captcha.query.filter_by(email=email).first()
+        if captchaModel:
+            captchaModel.captcha = captcha
+            captchaModel.createdTime = datetime.now()
+            try:
+                db.session.commit()
+            except Exception as e:
+                db.session.rollback()
+                return jsonify({'status': 403, 'msg': 'Failed to send captcha! ' + str(e)})
+        else:
+            captchaModel = Captcha(email=email, captcha=captcha, createdTime=datetime.now())
+            db.session.add(captchaModel)
+            try:
+                db.session.commit()
+            except Exception as e:
+                db.session.rollback()
+                return jsonify({'status': 403, 'msg': 'Failed to send captcha! ' + str(e)})
+
+        mail.send(message)
+
+        return jsonify({'status': 200, 'msg': 'Captcha has been sent to your email address!'})
+
+
+class Test(Resource):
+    @verifyToken
     def get(self, userType):
-        args = captchaParser.parse_args()
-        return {'message': 'Captcha sent'}
+        return jsonify({'status': 200, 'msg': 'A Successful Test.'})
 
 
 api.add_resource(Register, '/register/<string:userType>')
 api.add_resource(Login, '/login/<string:userType>')
-api.add_resource(GetCaptcha, '/captcha/<string:userType>')
-
+api.add_resource(GetCaptcha, '/captcha')
+api.add_resource(Test, '/test/<string:userType>')

@@ -11,7 +11,7 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///./database/MyOffer.sqlite3'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 # Secret key
-SECRET_KEY = 'averysimplekey'
+SECRET_KEY = 'AVerySimpleKey'
 
 # mail config
 MAIL_SERVER = "smtp.qq.com"

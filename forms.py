@@ -24,17 +24,17 @@ class RegisterForm(wtforms.Form):
         email = field.data
         employee = Employee.query.filter_by(email=email).first()
         if employee:
-            raise ValidationError('Email already registered as an identity of employees')
+            raise ValidationError('Email already registered as an identity of an employee')
         employer = Employer.query.filter_by(email=email).first()
         if employer:
-            raise ValidationError('Email already registered as an identity of employers')
+            raise ValidationError('Email already registered as an identity of an employer')
         return True
 
     def validateCaptcha(self, field):
         captcha = field.data
         email = self.email.data
         captchaModel = Captcha.query.filter_by(email=email).order_by(Captcha.createdTime.desc()).first()
-        if not captchaModel or captchaModel.captcha.lower() != captcha.lower() or captchaModel.creatdTime + timedelta(
+        if not captchaModel or captchaModel.captcha.lower() != captcha.lower() or captchaModel.createdTime + timedelta(
                 minutes=5) < datetime.now():
             raise validators.ValidationError('Invalid captcha')
         return True
