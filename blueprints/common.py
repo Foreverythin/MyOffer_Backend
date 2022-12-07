@@ -1,3 +1,4 @@
+from authlib.jose import jwt
 from flask import Blueprint, request, session, jsonify
 from flask_restful import Api, Resource, reqparse
 from flask_mail import Message
@@ -10,6 +11,7 @@ from datetime import datetime
 from forms import LoginForm, RegisterForm
 from models import Employer, Employee, Captcha
 from exts import db, mail
+from config import SECRET_KEY
 from utils import generateToken, verifyToken
 
 bp = Blueprint('common', __name__, url_prefix='/')
@@ -143,6 +145,32 @@ class GetCaptcha(Resource):
         return jsonify({'status': 200, 'msg': 'Captcha has been sent to your email address!'})
 
 
+class Logout(Resource):
+    @verifyToken
+    def get(self, userType):
+        token = request.headers.get('Authorization')[9:]
+        token = bytes(token, encoding='utf-8')
+        payload = jwt.decode(token, SECRET_KEY)
+        if userType == 'employee':
+            employee = Employee.query.filter_by(email=payload['email']).first()
+            employee.logged = False
+            try:
+                db.session.commit()
+            except Exception as e:
+                return jsonify({'status': 403, 'msg': str(e)})
+            return jsonify({'status': 200, 'msg': 'Successfully logged out!'})
+        elif userType == 'employer':
+            employer = Employer.query.filter_by(email=payload['email']).first()
+            employer.logged = False
+            try:
+                db.session.commit()
+            except Exception as e:
+                return jsonify({'status': 403, 'msg': str(e)})
+            return jsonify({'status': 200, 'msg': 'Successfully logged out!'})
+        else:
+            return jsonify({'status': 407, 'msg': 'Invalid url!'})
+
+
 class Test(Resource):
     @verifyToken
     def get(self, userType):
@@ -153,3 +181,4 @@ api.add_resource(Register, '/register/<string:userType>')
 api.add_resource(Login, '/login/<string:userType>')
 api.add_resource(GetCaptcha, '/captcha')
 api.add_resource(Test, '/test/<string:userType>')
+api.add_resource(Logout, '/logout/<string:userType>')

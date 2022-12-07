@@ -47,5 +47,6 @@ if __name__ == '__main__':
 # 404: errors when validating the form
 # 405: account has already existed
 # 406: invalid captcha
+# 407: invalid url
 # 409: JoseError
 # 410: the user has not logged in

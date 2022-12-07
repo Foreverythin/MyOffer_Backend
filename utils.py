@@ -20,10 +20,7 @@ def verifyToken(func):
     def wrapper(self, userType):
         tokenStr = request.headers.get('Authorization')
         token = tokenStr[9:]
-        print(type(token))
         token = bytes(token, encoding="utf8")
-        print(type(token))
-        print(token)
         if token:
             try:
                 payload = jwt.decode(token, SECRET_KEY)
