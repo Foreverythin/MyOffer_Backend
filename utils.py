@@ -15,7 +15,7 @@ def generateToken(email):
     return tokenStr
 
 
-# define a decorator to check the token
+# define a decorator to check the token: employee and employer
 def verifyToken(func):
     def wrapper(self, userType, *args, **kwargs):
         tokenStr = request.headers.get('Authorization')
@@ -37,6 +37,28 @@ def verifyToken(func):
                         return func(userType)
                     else:
                         return jsonify({'status': 410, 'msg': 'Please log in first!'})
+                else:
+                    return jsonify({'status': 410, 'msg': 'Please log in first!'})
+            except JoseError as e:
+                return jsonify({'status': 409, 'msg': 'Please log in first!'})
+        else:
+            return jsonify({'status': 410, 'msg': 'Please log in first!'})
+    return wrapper
+
+
+# define a decorator to check the token: employee
+def verifyEmployeeToken(func):
+    @wraps(func)
+    def wrapper(self, *args, **kwargs):
+        tokenStr = request.headers.get('Authorization')
+        token = tokenStr[9:]
+        token = bytes(token, encoding="utf8")
+        if token:
+            try:
+                payload = jwt.decode(token, SECRET_KEY)
+                employee = Employee.query.filter_by(email=payload['email']).first()
+                if employee and employee.logged:
+                    return func(self, *args, **kwargs)
                 else:
                     return jsonify({'status': 410, 'msg': 'Please log in first!'})
             except JoseError as e:
