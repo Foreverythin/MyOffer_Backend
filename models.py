@@ -11,6 +11,7 @@ class Employee(db.Model):
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(200), nullable=False)
     logged = db.Column(db.Boolean, nullable=False, default=False)
+    avatar = db.Column(db.String(200), nullable=False, default='upload/avatar/default.png')
 
 
 # Define the Employer class, which is used to store employers' information
@@ -20,6 +21,7 @@ class Employer(db.Model):
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(200), nullable=False)
     logged = db.Column(db.Boolean, nullable=False, default=False)
+    avatar = db.Column(db.String(200), nullable=False, default='upload/avatar/default.png')
 
 
 # Define the Captcha class, which is used to store the captcha

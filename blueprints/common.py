@@ -1,9 +1,10 @@
 from authlib.jose import jwt
-from flask import Blueprint, request, session, jsonify
+from flask import Blueprint, request, session, jsonify, send_file, send_from_directory
 from flask_restful import Api, Resource, reqparse
 from flask_mail import Message
 from werkzeug.security import generate_password_hash, check_password_hash
 
+import os
 import string
 import random
 from datetime import datetime
@@ -13,6 +14,8 @@ from models import Employer, Employee, Captcha
 from exts import db, mail
 from config import SECRET_KEY
 from utils import generateToken, verifyToken
+
+AVATAR_UPLOAD_FOLDER = 'upload/avatar/'
 
 bp = Blueprint('common', __name__, url_prefix='/')
 api = Api(bp)
@@ -171,14 +174,81 @@ class Logout(Resource):
             return jsonify({'status': 407, 'msg': 'Invalid url!'})
 
 
-class Test(Resource):
-    @verifyToken
-    def get(self, userType):
-        return jsonify({'status': 200, 'msg': 'A Successful Test.'})
+class Avatar(Resource):
+    def get(self, userType, tokenStr):
+        token = tokenStr[9:]
+        token = bytes(token, encoding='utf-8')
+        payload = jwt.decode(token, SECRET_KEY)
+        if userType == 'employee':
+            employee = Employee.query.filter_by(email=payload['email']).first()
+            if employee:
+                return send_file(employee.avatar, mimetype='image')
+            else:
+                return jsonify({'status': 406, 'msg': 'Invalid token!'})
+        elif userType == 'employer':
+            employer = Employer.query.filter_by(email=payload['email']).first()
+            if employer:
+                return send_file(employer.avatar, mimetype='image')
+            else:
+                return jsonify({'status': 406, 'msg': 'Invalid token!'})
+        else:
+            return send_file('/upload/avatar/default.png', mimetype='image')
+
+    def post(self, userType, tokenStr):
+        token = tokenStr[9:]
+        token = bytes(token, encoding='utf-8')
+        payload = jwt.decode(token, SECRET_KEY)
+        avatar = request.files.get('file')
+        if not avatar:
+            return jsonify({'status': 402, 'msg': 'No file uploaded!'})
+        if userType == 'employee':
+            employee = Employee.query.filter_by(email=payload['email']).first()
+            if employee:
+                # change the name of the avatar
+                avatarName = str(employee.email + '.' + avatar.filename.split('.')[-1])
+                # save the avatar
+                avatar.save(os.path.join(AVATAR_UPLOAD_FOLDER, avatarName))
+                # update the avatar in the database
+                employee.avatar = os.path.join(AVATAR_UPLOAD_FOLDER, avatarName)
+                try:
+                    db.session.commit()
+                    return jsonify({'status': 200, 'msg': 'Successfully updated!'})
+                except Exception as e:
+                    return jsonify({'status': 403, 'msg': 'Failed to update! ' + str(e)})
+            else:
+                return jsonify({'status': 410, 'msg': 'Login in firstly!'})
+        elif userType == 'employer':
+            employer = Employer.query.filter_by(email=payload['email']).first()
+            if employer:
+                # change the name of the avatar
+                avatarName = str(employer.email + '.' + avatar.filename.split('.')[-1])
+                # save the avatar
+                avatar.save(os.path.join(AVATAR_UPLOAD_FOLDER, avatarName))
+                # update the avatar in the database
+                employer.avatar = os.path.join(AVATAR_UPLOAD_FOLDER, avatarName)
+                try:
+                    db.session.commit()
+                    return jsonify({'status': 200, 'msg': 'Successfully updated!'})
+                except Exception as e:
+                    return jsonify({'status': 403, 'msg': 'Failed to update! ' + str(e)})
+            else:
+                return jsonify({'status': 410, 'msg': 'Login in firstly!'})
+        else:
+            return jsonify({'status': 410, 'msg': 'Login in firstly!'})
+
+
+# class UpdateAvatar(Resource):
+#     @verifyToken
+#     def post(self, userType):
+#         print(1)
+#         avatar = request.files['avatar']
+#         print(avatar)
+#         return jsonify({'status': 200, 'msg': 'Successfully updated!'})
 
 
 api.add_resource(Register, '/register/<string:userType>')
 api.add_resource(Login, '/login/<string:userType>')
 api.add_resource(GetCaptcha, '/captcha')
-api.add_resource(Test, '/test/<string:userType>')
+api.add_resource(Avatar, '/avatar/<string:userType>/<string:tokenStr>')
+# api.add_resource(UpdateAvatar, '/updateAvatar/<string:userType>')
 api.add_resource(Logout, '/logout/<string:userType>')

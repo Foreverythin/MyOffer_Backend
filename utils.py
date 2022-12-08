@@ -17,7 +17,7 @@ def generateToken(email):
 
 # define a decorator to check the token
 def verifyToken(func):
-    def wrapper(self, userType):
+    def wrapper(self, userType, *args, **kwargs):
         tokenStr = request.headers.get('Authorization')
         token = tokenStr[9:]
         token = bytes(token, encoding="utf8")

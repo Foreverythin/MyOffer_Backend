@@ -25,8 +25,8 @@ app.register_blueprint(common_bp)
 # register the mail
 mail.init_app(app)
 
-# register the migrate
-migrate = Migrate(app, db, compare_type=True, compare_server_default=True)
+# register the migration
+migrate = Migrate(app, db, render_as_batch=True, compare_type=True, compare_server_default=True, compare_default=True)
 
 
 @app.route('/')
@@ -48,5 +48,6 @@ if __name__ == '__main__':
 # 405: account has already existed
 # 406: invalid captcha
 # 407: invalid url
+# 408: no file uploaded
 # 409: JoseError
 # 410: the user has not logged in
