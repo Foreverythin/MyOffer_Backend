@@ -31,3 +31,12 @@ class Captcha(db.Model):
     email = db.Column(db.String(100), nullable=False)
     captcha = db.Column(db.String(10), nullable=False)
     createdTime = db.Column(db.DateTime, nullable=False)
+
+
+# Define another captcha table to store the captcha for changing password
+class CaptchaPasswordChange(db.Model):
+    __tablename__ = 'captchaPasswordChange'
+    captchaId = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    email = db.Column(db.String(100), nullable=False)
+    captcha = db.Column(db.String(10), nullable=False)
+    createdTime = db.Column(db.DateTime, nullable=False)

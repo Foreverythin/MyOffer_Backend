@@ -10,12 +10,13 @@ import random
 from datetime import datetime
 
 from forms import LoginForm, RegisterForm
-from models import Employer, Employee, Captcha
+from models import Employer, Employee, Captcha, CaptchaPasswordChange
 from exts import db, mail
 from config import SECRET_KEY
 from utils import generateToken, verifyToken
 
 AVATAR_UPLOAD_FOLDER = 'upload/avatar/'
+LETTRES = string.ascii_letters + string.digits  # Containing all letters and numbers.
 
 bp = Blueprint('common', __name__, url_prefix='/')
 api = Api(bp)
@@ -35,8 +36,6 @@ loginParser.add_argument('password', type=str, required=True, help='password can
 
 class Login(Resource):
     def post(self, userType):
-        # print the header of the request
-        print(request.headers)
         # json to form
         args = loginParser.parse_args()
         form = LoginForm()
@@ -110,8 +109,6 @@ class Register(Resource):
 
 class GetCaptcha(Resource):
     def get(self):
-        print('i am here')
-        print(request.headers.get('Authorization'))
         # get the parameters from the request
         email = request.args.get('email')
         User = Employee.query.filter_by(email=email).first()
@@ -120,8 +117,7 @@ class GetCaptcha(Resource):
         User = Employer.query.filter_by(email=email).first()
         if User:
             return jsonify({'status': 405, 'msg': 'Account already exists as an identity of an employer!'})
-        letters = string.ascii_letters + string.digits  # Get all the letters and numbers.
-        captcha = "".join(random.sample(letters, 4))  # Generate a random captcha.
+        captcha = "".join(random.sample(LETTRES, 4))  # Generate a random captcha.
         message = Message('Captcha', recipients=[email], body="The captcha is: " + captcha + ", just valid for 5 "
                                                                                                 "minutes.")
 
@@ -237,18 +233,77 @@ class Avatar(Resource):
             return jsonify({'status': 410, 'msg': 'Login in firstly!'})
 
 
-# class UpdateAvatar(Resource):
-#     @verifyToken
-#     def post(self, userType):
-#         print(1)
-#         avatar = request.files['avatar']
-#         print(avatar)
-#         return jsonify({'status': 200, 'msg': 'Successfully updated!'})
+class changePassword(Resource):
+    @verifyToken
+    def post(self, userType):
+        token = request.headers.get('Authorization')[9:]
+        token = bytes(token, encoding='utf-8')
+        payload = jwt.decode(token, SECRET_KEY)
+        email = payload.get('email')
+        captchaModel = CaptchaPasswordChange.query.filter_by(email=email).first()
+        if captchaModel:
+            if captchaModel.captcha == request.json.get('captcha'):
+                if (datetime.now() - captchaModel.createdTime).seconds < 300:
+                    if userType == 'employee':
+                        employee = Employee.query.filter_by(email=email).first()
+                        hashPassword = generate_password_hash(request.json.get('password'))
+                        employee.password = hashPassword
+                        try:
+                            db.session.commit()
+                            return jsonify({'status': 200, 'msg': 'Successfully changed!'})
+                        except Exception as e:
+                            return jsonify({'status': 403, 'msg': 'Failed to change! ' + str(e)})
+                    elif userType == 'employer':
+                        employer = Employer.query.filter_by(email=email).first()
+                        hashPassword = generate_password_hash(request.json.get('password'))
+                        employer.password = hashPassword
+                        try:
+                            db.session.commit()
+                            return jsonify({'status': 200, 'msg': 'Successfully changed!'})
+                        except Exception as e:
+                            return jsonify({'status': 403, 'msg': 'Failed to change! ' + str(e)})
+                    else:
+                        return jsonify({'status': 407, 'msg': 'Invalid url!'})
+                else:
+                    return jsonify({'status': 405, 'msg': 'Captcha expired!'})
+            else:
+                return jsonify({'status': 404, 'msg': 'Invalid captcha!'})
+
+    @verifyToken
+    def get(self, userType):
+        token = request.headers.get('Authorization')[9:]
+        token = bytes(token, encoding='utf-8')
+        payload = jwt.decode(token, SECRET_KEY)
+        email = payload.get('email')
+        captcha = "".join(random.sample(LETTRES, 4))  # Generate a random captcha.
+        message = Message('Captcha', recipients=[email], body="The captcha is: " + captcha + ", just valid for 5 "
+                                                                                             "minutes.")
+        # check if the email has been sent captcha before
+        captchaModel = CaptchaPasswordChange.query.filter_by(email=email).first()
+        if captchaModel:
+            captchaModel.captcha = captcha
+            captchaModel.createdTime = datetime.now()
+            try:
+                db.session.commit()
+            except Exception as e:
+                db.session.rollback()
+                return jsonify({'status': 403, 'msg': 'Failed to send captcha! ' + str(e)})
+        else:
+            captchaModel = CaptchaPasswordChange(email=email, captcha=captcha, createdTime=datetime.now())
+            db.session.add(captchaModel)
+            try:
+                db.session.commit()
+            except Exception as e:
+                db.session.rollback()
+                return jsonify({'status': 403, 'msg': 'Failed to send captcha! ' + str(e)})
+        mail.send(message)
+
+        return jsonify({'status': 200, 'msg': 'Captcha has been sent to your email address!'})
 
 
 api.add_resource(Register, '/register/<string:userType>')
 api.add_resource(Login, '/login/<string:userType>')
 api.add_resource(GetCaptcha, '/captcha')
 api.add_resource(Avatar, '/avatar/<string:userType>/<string:tokenStr>')
-# api.add_resource(UpdateAvatar, '/updateAvatar/<string:userType>')
 api.add_resource(Logout, '/logout/<string:userType>')
+api.add_resource(changePassword, '/changePassword/<string:userType>')
