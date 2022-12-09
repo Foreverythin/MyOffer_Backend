@@ -12,12 +12,13 @@ class Employee(db.Model):
     password = db.Column(db.String(200), nullable=False)
     logged = db.Column(db.Boolean, nullable=False, default=False)
     avatar = db.Column(db.String(200), nullable=False, default='upload/avatar/default.png')
-    name = db.Column(db.String(50), nullable=True)
-    gender = db.Column(db.String(10), nullable=True)
-    age = db.Column(db.Integer, nullable=True, default=18)
-    major = db.Column(db.String(50), nullable=True)
-    degree = db.Column(db.String(50), nullable=True)
-    tel = db.Column(db.String(20), nullable=True)
+    resume = db.Column(db.String(200), nullable=True)
+    name = db.Column(db.String(50), nullable=False, default='Your Name')
+    gender = db.Column(db.String(10), nullable=False, default='Male')
+    age = db.Column(db.Integer, nullable=False, default=18)
+    major = db.Column(db.String(50), nullable=False, default='Your Major')
+    degree = db.Column(db.String(50), nullable=False, default='Your Degree')
+    tel = db.Column(db.String(20), nullable=False, default='Your Tel')
 
 
 # Define the Employer class, which is used to store employers' information

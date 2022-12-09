@@ -178,17 +178,17 @@ class Avatar(Resource):
         if userType == 'employee':
             employee = Employee.query.filter_by(email=payload['email']).first()
             if employee:
-                return send_file(employee.avatar, mimetype='image')
+                return send_file(AVATAR_UPLOAD_FOLDER + employee.avatar, mimetype='image')
             else:
                 return jsonify({'status': 406, 'msg': 'Invalid token!'})
         elif userType == 'employer':
             employer = Employer.query.filter_by(email=payload['email']).first()
             if employer:
-                return send_file(employer.avatar, mimetype='image')
+                return send_file(AVATAR_UPLOAD_FOLDER + employer.avatar, mimetype='image')
             else:
                 return jsonify({'status': 406, 'msg': 'Invalid token!'})
         else:
-            return send_file('/upload/avatar/default.png', mimetype='image')
+            return send_file(AVATAR_UPLOAD_FOLDER + 'default.png', mimetype='image')
 
     def post(self, userType, tokenStr):
         token = tokenStr[9:]
@@ -205,7 +205,7 @@ class Avatar(Resource):
                 # save the avatar
                 avatar.save(os.path.join(AVATAR_UPLOAD_FOLDER, avatarName))
                 # update the avatar in the database
-                employee.avatar = os.path.join(AVATAR_UPLOAD_FOLDER, avatarName)
+                employee.avatar = avatarName
                 try:
                     db.session.commit()
                     return jsonify({'status': 200, 'msg': 'Successfully updated!'})
@@ -221,7 +221,7 @@ class Avatar(Resource):
                 # save the avatar
                 avatar.save(os.path.join(AVATAR_UPLOAD_FOLDER, avatarName))
                 # update the avatar in the database
-                employer.avatar = os.path.join(AVATAR_UPLOAD_FOLDER, avatarName)
+                employer.avatar = avatarName
                 try:
                     db.session.commit()
                     return jsonify({'status': 200, 'msg': 'Successfully updated!'})
