@@ -1,7 +1,7 @@
 import os
 from authlib.jose import jwt
 
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, send_file
 from flask_restful import Api, Resource
 
 from models import Employee
@@ -105,6 +105,19 @@ class Resume(Resource):
             return jsonify({'status': 200, 'msg': 'No resume uploaded!'})
 
 
+class DownloadResume(Resource):
+    @verifyEmployeeToken
+    def get(self):
+        tokenStr = request.headers.get('Authorization')[9:]
+        email = emailByTokenStr(tokenStr)
+        employee = Employee.query.filter_by(email=email).first()
+        if employee.resume is not None:
+            return send_file(RESUME_UPLOAD_FOLDER + employee.resume, mimetype='application/pdf')
+        else:
+            return jsonify({'status': 400, 'msg': 'No resume uploaded!'})
+
+
 api.add_resource(EmployeeList, '/list')
 api.add_resource(Profile, '/profile')
 api.add_resource(Resume, '/resume')
+api.add_resource(DownloadResume, '/downloadResume')
