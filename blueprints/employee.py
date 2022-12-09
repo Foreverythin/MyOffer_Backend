@@ -88,6 +88,22 @@ class Resume(Resource):
         else:
             return jsonify({'status': 200, 'msg': 'Resume fetched successfully!', 'data': {'resume': 'No File Uploaded'}})
 
+    @verifyEmployeeToken
+    def delete(self):
+        tokenStr = request.headers.get('Authorization')[9:]
+        email = emailByTokenStr(tokenStr)
+        employee = Employee.query.filter_by(email=email).first()
+        if employee.resume is not None:
+            os.remove(RESUME_UPLOAD_FOLDER + employee.resume)
+            employee.resume = None
+            try:
+                db.session.commit()
+                return jsonify({'status': 200, 'msg': 'Delete resume successfully!'})
+            except Exception as e:
+                return jsonify({'status': 403, 'msg': str(e)})
+        else:
+            return jsonify({'status': 200, 'msg': 'No resume uploaded!'})
+
 
 api.add_resource(EmployeeList, '/list')
 api.add_resource(Profile, '/profile')
