@@ -13,7 +13,7 @@ from forms import LoginForm, RegisterForm
 from models import Employer, Employee, Captcha, CaptchaPasswordChange
 from exts import db, mail
 from config import SECRET_KEY
-from utils import generateToken, verifyToken
+from utils import generateToken, verifyToken, emailByTokenStr
 
 AVATAR_UPLOAD_FOLDER = 'upload/avatar/'
 LETTRES = string.ascii_letters + string.digits  # Containing all letters and numbers.
@@ -235,14 +235,12 @@ class Avatar(Resource):
 
 class changePassword(Resource):
     @verifyToken
-    def post(self, userType):
+    def put(self, userType):
         token = request.headers.get('Authorization')[9:]
-        token = bytes(token, encoding='utf-8')
-        payload = jwt.decode(token, SECRET_KEY)
-        email = payload.get('email')
+        email = emailByTokenStr(token)
         captchaModel = CaptchaPasswordChange.query.filter_by(email=email).first()
         if captchaModel:
-            if captchaModel.captcha == request.json.get('captcha'):
+            if captchaModel.captcha.lower() == request.json.get('captcha').lower():
                 if (datetime.now() - captchaModel.createdTime).seconds < 300:
                     if userType == 'employee':
                         employee = Employee.query.filter_by(email=email).first()
@@ -272,9 +270,7 @@ class changePassword(Resource):
     @verifyToken
     def get(self, userType):
         token = request.headers.get('Authorization')[9:]
-        token = bytes(token, encoding='utf-8')
-        payload = jwt.decode(token, SECRET_KEY)
-        email = payload.get('email')
+        email = emailByTokenStr(token)
         captcha = "".join(random.sample(LETTRES, 4))  # Generate a random captcha.
         message = Message('Captcha', recipients=[email], body="The captcha is: " + captcha + ", just valid for 5 "
                                                                                              "minutes.")

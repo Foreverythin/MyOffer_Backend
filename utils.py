@@ -66,3 +66,11 @@ def verifyEmployeeToken(func):
         else:
             return jsonify({'status': 410, 'msg': 'Please log in first!'})
     return wrapper
+
+
+def emailByTokenStr(tokenStr):
+    token = bytes(tokenStr, encoding="utf8")
+    payload = jwt.decode(token, SECRET_KEY)
+    email = payload.get('email')
+
+    return email
