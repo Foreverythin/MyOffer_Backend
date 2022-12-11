@@ -21,6 +21,7 @@ def verifyToken(func):
         tokenStr = request.headers.get('Authorization')
         token = tokenStr[9:]
         token = bytes(token, encoding="utf8")
+        print(token)
         if token:
             try:
                 payload = jwt.decode(token, SECRET_KEY)
@@ -34,7 +35,7 @@ def verifyToken(func):
                 elif userType == 'employer':
                     employer = Employer.query.filter_by(email=payload['email']).first()
                     if employer and employer.logged:
-                        return func(userType)
+                        return func(self, userType)
                     else:
                         return jsonify({'status': 410, 'msg': 'Please log in first!'})
                 else:
