@@ -30,8 +30,9 @@ class Employer(db.Model):
     logged = db.Column(db.Boolean, nullable=False, default=False)
     name = db.Column(db.String(50), nullable=True)
     CEO = db.Column(db.String(50), nullable=True)
+    researchDirection = db.Column(db.String(50), nullable=True)
     dateOfEstablishment = db.Column(db.Date, nullable=True)
-    placeOfEstablishment = db.Column(db.String(50), nullable=True)
+    location = db.Column(db.String(50), nullable=True)
     staff = db.Column(db.Integer, nullable=True)
 
 

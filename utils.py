@@ -19,9 +19,10 @@ def generateToken(email):
 def verifyToken(func):
     def wrapper(self, userType, *args, **kwargs):
         tokenStr = request.headers.get('Authorization')
+        if tokenStr is None:
+            return jsonify({'status': 410, 'msg': 'Please log in first!'})
         token = tokenStr[9:]
         token = bytes(token, encoding="utf8")
-        print(token)
         if token:
             try:
                 payload = jwt.decode(token, SECRET_KEY)
@@ -52,6 +53,8 @@ def verifyEmployeeToken(func):
     @wraps(func)
     def wrapper(self, *args, **kwargs):
         tokenStr = request.headers.get('Authorization')
+        if tokenStr is None:
+            return jsonify({'status': 410, 'msg': 'Please log in first!'})
         token = tokenStr[9:]
         token = bytes(token, encoding="utf8")
         if token:
@@ -74,6 +77,8 @@ def verifyEmployerToken(func):
     @wraps(func)
     def wrapper(self, *args, **kwargs):
         tokenStr = request.headers.get('Authorization')
+        if tokenStr is None:
+            return jsonify({'status': 410, 'msg': 'Please log in first!'})
         token = tokenStr[9:]
         token = bytes(token, encoding="utf8")
         if token:
