@@ -102,6 +102,14 @@ class Posts(Resource):
         except Exception as e:
             return jsonify({'status': 403, 'msg': str(e)})
 
+    @verifyEmployerToken
+    def get(self):
+        tokenStr = request.headers.get('Authorization')[9:]
+        email = emailByTokenStr(tokenStr)
+        employer = Employer.query.filter_by(email=email).first()
+        posts = Post.query.filter_by(employerId=employer.uid).all()
+        return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': [{'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment} for post in posts]})
+
 
 api.add_resource(EmployerList, '/list')
 api.add_resource(BasicInfo, '/basic-info')
