@@ -123,6 +123,37 @@ class Posts(Resource):
             return jsonify({'status': 403, 'msg': str(e)})
 
 
+class OnePost(Resource):
+    @verifyEmployerToken
+    def get(self):
+        pid = request.args.get('pid')
+        post = Post.query.filter_by(pid=pid).first()
+        return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': {'ID': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment}})
+
+    @verifyEmployerToken
+    def put(self):
+        pid = request.json.get('pid')
+        post = Post.query.filter_by(pid=pid).first()
+        post.title = request.json.get('title')
+        post.salary = request.json.get('salary')
+        post.degree = request.json.get('degree')
+        post.label = request.json.get('label')
+        post.tasks = request.json.get('tasks')
+        post.requirements = request.json.get('requirements')
+        inRecruitment = request.json.get('inRecruitment')
+        if inRecruitment == 'true':
+            post.inRecruitment = True
+        else:
+            post.inRecruitment = False
+        try:
+            db.session.commit()
+            return jsonify({'status': 200, 'msg': 'Post updated successfully!'})
+        except Exception as e:
+            return jsonify({'status': 403, 'msg': str(e)})
+
+
 api.add_resource(EmployerList, '/list')
 api.add_resource(BasicInfo, '/basic-info')
 api.add_resource(Posts, '/posts')
+api.add_resource(OnePost, '/one-post')
+
