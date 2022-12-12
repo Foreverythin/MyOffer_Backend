@@ -28,6 +28,32 @@ class Employer(db.Model):
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(200), nullable=False)
     logged = db.Column(db.Boolean, nullable=False, default=False)
+    name = db.Column(db.String(50), nullable=True)
+    CEO = db.Column(db.String(50), nullable=True)
+    dateOfEstablishment = db.Column(db.Date, nullable=True)
+    placeOfEstablishment = db.Column(db.String(50), nullable=True)
+    staff = db.Column(db.Integer, nullable=True)
+
+
+# Define the post class, which is used to store posts' information
+class Post(db.Model):
+    __tablename__ = 'post'
+    pid = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(100), nullable=False)
+    salary = db.Column(db.Integer, nullable=False)
+    degree = db.Column(db.String(50), nullable=False)
+    label = db.Column(db.String(50), nullable=False)
+    tasks = db.Column(db.String(1000), nullable=False)
+    requirements = db.Column(db.String(1000), nullable=False)
+    inRecruitment = db.Column(db.Boolean, nullable=False, default=True)
+    employerId = db.Column(db.Integer, db.ForeignKey('employer.uid'), nullable=False)
+
+
+# the relationship between post and employee is many-to-many
+class PostEmployee(db.Model):
+    __tablename__ = 'post_employee'
+    pid = db.Column(db.Integer, db.ForeignKey('post.pid'), primary_key=True)
+    uid = db.Column(db.Integer, db.ForeignKey('employee.uid'), primary_key=True)
 
 
 # Define the Captcha class, which is used to store the captcha
