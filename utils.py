@@ -69,6 +69,28 @@ def verifyEmployeeToken(func):
     return wrapper
 
 
+# define a decorator to check the token: employer
+def verifyEmployerToken(func):
+    @wraps(func)
+    def wrapper(self, *args, **kwargs):
+        tokenStr = request.headers.get('Authorization')
+        token = tokenStr[9:]
+        token = bytes(token, encoding="utf8")
+        if token:
+            try:
+                payload = jwt.decode(token, SECRET_KEY)
+                employer = Employer.query.filter_by(email=payload['email']).first()
+                if employer and employer.logged:
+                    return func(self, *args, **kwargs)
+                else:
+                    return jsonify({'status': 410, 'msg': 'Please log in first!'})
+            except JoseError as e:
+                return jsonify({'status': 409, 'msg': 'Please log in first!'})
+        else:
+            return jsonify({'status': 410, 'msg': 'Please log in first!'})
+    return wrapper
+
+
 def emailByTokenStr(tokenStr):
     token = bytes(tokenStr, encoding="utf8")
     payload = jwt.decode(token, SECRET_KEY)
