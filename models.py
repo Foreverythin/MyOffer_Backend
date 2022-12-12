@@ -34,6 +34,7 @@ class Employer(db.Model):
     dateOfEstablishment = db.Column(db.Date, nullable=True)
     location = db.Column(db.String(50), nullable=True)
     staff = db.Column(db.Integer, nullable=True)
+    introduction = db.Column(db.String(1000), nullable=True)
 
 
 # Define the post class, which is used to store posts' information

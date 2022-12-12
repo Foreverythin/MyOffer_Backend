@@ -54,10 +54,11 @@ class BasicInfo(Resource):
             employer.dateOfEstablishment = None
         employer.location = request.json.get('location')
         employer.staff = request.json.get('staff')
+        employer.introduction = request.json.get('introduction')
         try:
             db.session.commit()
             return jsonify({'status': 200, 'msg': 'Update profile successfully!',
-                            'data' :{'email': email, 'name': employer.name, 'CEO': employer.CEO, 'researchDirection': employer.researchDirection, 'dateOfEstablishment': employer.dateOfEstablishment, 'location': employer.location, 'staff': employer.staff}})
+                            'data' :{'email': email, 'name': employer.name, 'CEO': employer.CEO, 'researchDirection': employer.researchDirection, 'dateOfEstablishment': employer.dateOfEstablishment, 'location': employer.location, 'staff': employer.staff, 'introduction': employer.introduction}})
         except Exception as e:
             return jsonify({'status': 403, 'msg': str(e)})
 
@@ -72,8 +73,9 @@ class BasicInfo(Resource):
         dateOfEstablishment = employer.dateOfEstablishment
         location = employer.location
         staff = employer.staff
+        introduction = employer.introduction
         return jsonify({'status': 200, 'msg': 'Profile fetched successfully!', 'data':
-            {'email': email, 'name': name, 'CEO': CEO, 'researchDirection': researchDirection, 'dateOfEstablishment': dateOfEstablishment, 'location': location, 'staff': staff}})
+            {'email': email, 'name': name, 'CEO': CEO, 'researchDirection': researchDirection, 'dateOfEstablishment': dateOfEstablishment, 'location': location, 'staff': staff, 'introduction': introduction}})
 
 
 class Posts(Resource):
@@ -108,7 +110,17 @@ class Posts(Resource):
         email = emailByTokenStr(tokenStr)
         employer = Employer.query.filter_by(email=email).first()
         posts = Post.query.filter_by(employerId=employer.uid).all()
-        return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': [{'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment} for post in posts]})
+        return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': [{'ID': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment} for post in posts]})
+
+    @verifyEmployerToken
+    def delete(self):
+        post = Post.query.filter_by(pid=request.json.get('pid')).first()
+        try:
+            db.session.delete(post)
+            db.session.commit()
+            return jsonify({'status': 200, 'msg': 'Post deleted successfully!'})
+        except Exception as e:
+            return jsonify({'status': 403, 'msg': str(e)})
 
 
 api.add_resource(EmployerList, '/list')
