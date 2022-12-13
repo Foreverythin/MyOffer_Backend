@@ -179,8 +179,25 @@ class PostList(Resource):
         return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': {'posts': posts}})
 
 
+class PostInfo(Resource):
+    @verifyEmployeeToken
+    def get(self):
+        postID = request.args.get('postID')
+        post = Post.query.filter_by(pid=postID).first()
+        employerId = post.employerId
+        employer = Employer.query.filter_by(uid=employerId).first()
+        if employer.dateOfEstablishment is None:
+            employer_dateOfEstablishment = 'Unknown Date'
+        else:
+            employer_dateOfEstablishment = employer.dateOfEstablishment.strftime('%Y-%m-%d')
+        return jsonify({'status': 200, 'msg': 'Post fetched successfully!', 'data': {'postInfo': {'post_id': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment, 'receivedResumes': post.receivedResumes},
+                                                                                     'companyInfo': {'employer_id': employer.uid, 'email': employer.email, 'name': employer.name, 'CEO': employer.CEO, 'researchDirection': employer.researchDirection, 'dateOfEstablishment': employer_dateOfEstablishment,
+                                                                                              'location': employer.location, 'staff': employer.staff, 'introduction': employer.introduction}}})
+
+
 api.add_resource(EmployeeList, '/list')
 api.add_resource(Profile, '/profile')
 api.add_resource(Resume, '/resume')
 api.add_resource(DownloadResume, '/downloadResume')
 api.add_resource(PostList, '/post-list')
+api.add_resource(PostInfo, '/post-info')
