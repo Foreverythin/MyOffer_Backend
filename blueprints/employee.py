@@ -4,7 +4,7 @@ from authlib.jose import jwt
 from flask import Blueprint, jsonify, request, send_file
 from flask_restful import Api, Resource
 
-from models import Employee
+from models import Employee, Post, Employer
 from exts import db
 
 from config import SECRET_KEY
@@ -117,7 +117,56 @@ class DownloadResume(Resource):
             return jsonify({'status': 400, 'msg': 'No resume uploaded!'})
 
 
+class PostList(Resource):
+    @verifyEmployeeToken
+    def get(self):
+        postModel = Post.query.all()
+        posts = []
+        for post in postModel:
+            employerId = post.employerId
+            employer = Employer.query.filter_by(uid=employerId).first()
+            # employer_name = ''
+            # employer_CEO = ''
+            # employer_researchDirection = ''
+            # employer_dateOfEstablishment = ''
+            # employer_location = ''
+            # employer_staff = ''
+            # employer_introduction = ''
+            if employer.name is None:
+                employer_name = 'Unknown Name'
+            else:
+                employer_name = employer.name
+            if employer.CEO is None:
+                employer_CEO = 'Unknown CEO'
+            else:
+                employer_CEO = employer.CEO
+            if employer.researchDirection is None:
+                employer_researchDirection = 'Unknown research direction'
+            else:
+                employer_researchDirection = employer.researchDirection
+            if employer.dateOfEstablishment is None:
+                employer_dateOfEstablishment = 'Unknown Date'
+            else:
+                employer_dateOfEstablishment = employer.dateOfEstablishment.strftime('%Y-%m-%d')
+            if employer.location is None:
+                employer_location = 'Unknown location'
+            else:
+                employer_location = employer.location
+            if employer.staff is None:
+                employer_staff = 'Unknown staff number'
+            else:
+                employer_staff = employer.staff
+            if employer.introduction is None:
+                employer_introduction = 'No introduction'
+            else:
+                employer_introduction = employer.introduction
+            posts.append({'post_id': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment,
+                          'employer_id': employer.uid, 'employer_email': employer.email, 'employer_name': employer_name, 'employer_CEO': employer_CEO, 'employer_researchDirection': employer_researchDirection, 'employer_dateOfEstablishment': employer_dateOfEstablishment, 'employer_location': employer_location, 'employer_staff': employer_staff, 'employer_introduction': employer_introduction})
+        return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': {'posts': posts}})
+
+
 api.add_resource(EmployeeList, '/list')
 api.add_resource(Profile, '/profile')
 api.add_resource(Resume, '/resume')
 api.add_resource(DownloadResume, '/downloadResume')
+api.add_resource(PostList, '/post-list')

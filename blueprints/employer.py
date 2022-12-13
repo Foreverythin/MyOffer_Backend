@@ -84,6 +84,8 @@ class Posts(Resource):
         tokenStr = request.headers.get('Authorization')[9:]
         email = emailByTokenStr(tokenStr)
         employer = Employer.query.filter_by(email=email).first()
+        if employer.name is None:
+            return jsonify({'status': 400, 'msg': 'Please complete your profile first!'})
         # add a new post
         title = request.json.get('title')
         salary = request.json.get('salary')
