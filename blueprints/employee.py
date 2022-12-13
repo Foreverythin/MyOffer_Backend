@@ -195,9 +195,27 @@ class PostInfo(Resource):
                                                                                               'location': employer.location, 'staff': employer.staff, 'introduction': employer.introduction}}})
 
 
+class SimilarPosts(Resource):
+    @verifyEmployeeToken
+    def get(self):
+        postID = request.args.get('postID')
+        post = Post.query.filter_by(pid=postID).first()
+        label = post.label
+        similarPosts = Post.query.filter_by(label=label).all()
+        posts = []
+        for post in similarPosts:
+            if post.pid != int(postID):
+                posts.append({'post_id': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label})
+
+        print(posts)
+
+        return jsonify({'status': 200, 'msg': 'Similar posts fetched successfully!', 'data': {'posts': posts}})
+
+
 api.add_resource(EmployeeList, '/list')
 api.add_resource(Profile, '/profile')
 api.add_resource(Resume, '/resume')
 api.add_resource(DownloadResume, '/downloadResume')
 api.add_resource(PostList, '/post-list')
 api.add_resource(PostInfo, '/post-info')
+api.add_resource(SimilarPosts, '/similar-posts')
