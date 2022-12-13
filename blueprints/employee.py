@@ -120,18 +120,19 @@ class DownloadResume(Resource):
 class PostList(Resource):
     @verifyEmployeeToken
     def get(self):
+        title = request.args.get('title')
+        city = request.args.get('city')
+        salary = request.args.get('salary')
+        labels = request.args.get('labels').split(',')
+        viewMethod = request.args.get('viewMethod')
         postModel = Post.query.all()
+        print(title, city, salary, labels, viewMethod)
         posts = []
         for post in postModel:
+            if labels[0] != '' and post.label not in labels:
+                continue
             employerId = post.employerId
             employer = Employer.query.filter_by(uid=employerId).first()
-            # employer_name = ''
-            # employer_CEO = ''
-            # employer_researchDirection = ''
-            # employer_dateOfEstablishment = ''
-            # employer_location = ''
-            # employer_staff = ''
-            # employer_introduction = ''
             if employer.name is None:
                 employer_name = 'Unknown Name'
             else:

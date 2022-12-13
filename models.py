@@ -48,6 +48,7 @@ class Post(db.Model):
     tasks = db.Column(db.String(1000), nullable=False)
     requirements = db.Column(db.String(1000), nullable=False)
     inRecruitment = db.Column(db.Boolean, nullable=False, default=True)
+    receivedResumes = db.Column(db.Integer, nullable=False, default=0)
     employerId = db.Column(db.Integer, db.ForeignKey('employer.uid'), nullable=False)
 
 
