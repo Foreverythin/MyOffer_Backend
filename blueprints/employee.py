@@ -2,10 +2,12 @@ import os
 from authlib.jose import jwt
 
 from flask import Blueprint, jsonify, request, send_file
+from flask_mail import Message
 from flask_restful import Api, Resource
 
-from models import Employee, Post, Employer
-from exts import db
+from models import Employee, Post, Employer, PostEmployee
+from exts import db, mail
+from app import app
 
 from config import SECRET_KEY
 from utils import verifyEmployeeToken, emailByTokenStr
@@ -212,6 +214,35 @@ class SimilarPosts(Resource):
         return jsonify({'status': 200, 'msg': 'Similar posts fetched successfully!', 'data': {'posts': posts}})
 
 
+class SendResume(Resource):
+    @verifyEmployeeToken
+    def post(self):
+        postID = request.json.get('postID')
+        post = Post.query.filter_by(pid=postID).first()
+        tokenStr = request.headers.get('Authorization')[9:]
+        email = emailByTokenStr(tokenStr)
+        employee = Employee.query.filter_by(email=email).first()
+        existingPostEmployee = PostEmployee.query.filter_by(pid=postID, uid=employee.uid).first()
+        if existingPostEmployee is not None:
+            return jsonify({'status': 400, 'msg': 'Resume already sent!'})
+        if employee.resume is not None:
+            employer = Employer.query.filter_by(uid=post.employerId).first()
+            message = Message('New Resume', recipients=[employer.email], body='This is a resume from a person who would like to apply for a post in your company. Please have a look!')
+            with app.open_resource(RESUME_UPLOAD_FOLDER + employee.resume) as fp:
+                message.attach(employee.resume, "application/pdf", fp.read())
+            mail.send(message)
+            post.receivedResumes += 1
+            post_employee = PostEmployee(pid=postID, uid=employee.uid)
+            db.session.add(post_employee)
+            try:
+                db.session.commit()
+                return jsonify({'status': 200, 'msg': 'Resume sent successfully!'})
+            except Exception as e:
+                return jsonify({'status': 403, 'msg': str(e)})
+        else:
+            return jsonify({'status': 411, 'msg': 'No resume uploaded! Please upload your resume first!'})
+
+
 api.add_resource(EmployeeList, '/list')
 api.add_resource(Profile, '/profile')
 api.add_resource(Resume, '/resume')
@@ -219,3 +250,4 @@ api.add_resource(DownloadResume, '/downloadResume')
 api.add_resource(PostList, '/post-list')
 api.add_resource(PostInfo, '/post-info')
 api.add_resource(SimilarPosts, '/similar-posts')
+api.add_resource(SendResume, '/send-resume')

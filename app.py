@@ -5,9 +5,9 @@ from exts import db, mail
 from models import Employee
 from flask_cors import CORS
 
-from blueprints import employee_bp, employer_bp, common_bp
-
 app = Flask(__name__)
+
+from blueprints import employee_bp, employer_bp, common_bp
 
 app.config.from_object(config)
 
@@ -29,11 +29,6 @@ mail.init_app(app)
 migrate = Migrate(app, db, render_as_batch=True, compare_type=True, compare_server_default=True, compare_default=True)
 
 
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!!!'
-
-
 if __name__ == '__main__':
     app.run()
 
@@ -51,3 +46,5 @@ if __name__ == '__main__':
 # 408: no file uploaded
 # 409: JoseError
 # 410: the user has not logged in
+# 411: no resume uploaded
+# 412: the resume is already sent
