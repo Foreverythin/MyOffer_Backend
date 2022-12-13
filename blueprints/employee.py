@@ -126,13 +126,18 @@ class PostList(Resource):
         labels = request.args.get('labels').split(',')
         viewMethod = request.args.get('viewMethod')
         postModel = Post.query.all()
-        print(title, city, salary, labels, viewMethod)
         posts = []
         for post in postModel:
-            if labels[0] != '' and post.label not in labels:
-                continue
             employerId = post.employerId
             employer = Employer.query.filter_by(uid=employerId).first()
+            if labels[0] != '' and post.label not in labels:
+                continue
+            if title != '' and title not in post.title:
+                continue
+            if city != '' and city != employer.location:
+                continue
+            if int(salary) > post.salary:
+                continue
             if employer.name is None:
                 employer_name = 'Unknown Name'
             else:
@@ -161,8 +166,16 @@ class PostList(Resource):
                 employer_introduction = 'No introduction'
             else:
                 employer_introduction = employer.introduction
-            posts.append({'post_id': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment,
+            posts.append({'post_id': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment, 'receivedResumes': post.receivedResumes,
                           'employer_id': employer.uid, 'employer_email': employer.email, 'employer_name': employer_name, 'employer_CEO': employer_CEO, 'employer_researchDirection': employer_researchDirection, 'employer_dateOfEstablishment': employer_dateOfEstablishment, 'employer_location': employer_location, 'employer_staff': employer_staff, 'employer_introduction': employer_introduction})
+
+        if viewMethod == 'Hot Posts':
+            # sort post by receivedResumes
+            posts.sort(key=lambda x: x['receivedResumes'], reverse=True)
+        else:
+            # sort post by salary
+            posts.sort(key=lambda x: x['salary'], reverse=True)
+
         return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': {'posts': posts}})
 
 

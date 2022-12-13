@@ -112,7 +112,7 @@ class Posts(Resource):
         email = emailByTokenStr(tokenStr)
         employer = Employer.query.filter_by(email=email).first()
         posts = Post.query.filter_by(employerId=employer.uid).all()
-        return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': [{'ID': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment} for post in posts]})
+        return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': [{'ID': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment, 'receivedResumes': post.receivedResumes} for post in posts]})
 
     @verifyEmployerToken
     def delete(self):
