@@ -219,6 +219,8 @@ class SendResume(Resource):
     def post(self):
         postID = request.json.get('postID')
         post = Post.query.filter_by(pid=postID).first()
+        if not post.inRecruitment:
+            return jsonify({'status': 400, 'msg': 'This post is not in recruitment!'})
         tokenStr = request.headers.get('Authorization')[9:]
         email = emailByTokenStr(tokenStr)
         employee = Employee.query.filter_by(email=email).first()
@@ -227,7 +229,7 @@ class SendResume(Resource):
             return jsonify({'status': 400, 'msg': 'Resume already sent!'})
         if employee.resume is not None:
             employer = Employer.query.filter_by(uid=post.employerId).first()
-            message = Message('New Resume', recipients=[employer.email], body='This is a resume from a person who would like to apply for a post in your company. Please have a look!')
+            message = Message('New Resume', recipients=[employer.email], body='This is a resume from a person who would like to apply for the post ' + post.title + ' in your company. Please have a look!')
             with app.open_resource(RESUME_UPLOAD_FOLDER + employee.resume) as fp:
                 message.attach(employee.resume, "application/pdf", fp.read())
             mail.send(message)

@@ -48,3 +48,4 @@ if __name__ == '__main__':
 # 410: the user has not logged in
 # 411: no resume uploaded
 # 412: the resume is already sent
+# 413: the resume is out of recruitment
