@@ -18,14 +18,6 @@ bp = Blueprint('employee', __name__, url_prefix='/employee')
 api = Api(bp)
 
 
-class EmployeeList(Resource):
-    def get(self):
-        return {'employees': ['John', 'Jane', 'Joe']}
-
-    def post(self):
-        return {'message': 'Employee created'}
-
-
 class Profile(Resource):
     @verifyEmployeeToken
     def put(self):
@@ -245,7 +237,6 @@ class SendResume(Resource):
             return jsonify({'status': 411, 'msg': 'No resume uploaded! Please upload your resume first!'})
 
 
-api.add_resource(EmployeeList, '/list')
 api.add_resource(Profile, '/profile')
 api.add_resource(Resume, '/resume')
 api.add_resource(DownloadResume, '/downloadResume')

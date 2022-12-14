@@ -21,23 +21,6 @@ fields = {
 }
 
 
-class EmployerList(Resource):
-    @marshal_with(fields)
-    def get(self):
-        return {'employers': ['John', 'Jane', 'Joe']}
-
-    def post(self):
-        # get the data from the request
-        args = parser.parse_args()
-        name = args['name']
-        age = args['age']
-        gender = args.get('gender')
-        return {'message': 'Employer created', 'name': name, 'age': age, 'gender': gender}
-        # args = parser.parse_args()
-        # print(args)
-        # return {'message': 'Employer created', 'data': args.get('name')}
-
-
 class BasicInfo(Resource):
     @verifyEmployerToken
     def post(self):
@@ -154,7 +137,6 @@ class OnePost(Resource):
             return jsonify({'status': 403, 'msg': str(e)})
 
 
-api.add_resource(EmployerList, '/list')
 api.add_resource(BasicInfo, '/basic-info')
 api.add_resource(Posts, '/posts')
 api.add_resource(OnePost, '/one-post')
