@@ -1,0 +1,762 @@
+[2022-12-15 20:48:28,166] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 20:48:36,826] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 20:49:56,126] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 20:50:03,173] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 20:52:06,915] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 20:52:16,546] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 20:52:30,651] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:20,774] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:20,899] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:21,025] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:21,151] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:21,277] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:21,403] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:21,529] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:21,655] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:21,782] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:07:21,908] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:44,689] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:14:44,844] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:44,972] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:45,098] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:45,223] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:45,347] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:45,470] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:45,594] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:45,718] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:45,846] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:14:45,973] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:54,082] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:15:54,240] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:54,371] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:54,502] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:54,631] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:54,761] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:54,894] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:55,025] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:55,154] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:55,289] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:15:55,415] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:57,157] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:16:57,305] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:57,430] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:57,554] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:57,680] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:57,807] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:57,934] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:58,060] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:58,187] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:58,313] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:16:58,439] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:18,385] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:17:18,387] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:17:18,387] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:17:18,388] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:17:18,389] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:17:18,389] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:17:18,390] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:17:18,390] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:17:18,391] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:17:18,392] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:17:18,392] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:17:18,393] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:17:18,537] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:18,663] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:18,789] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:18,916] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:19,043] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:19,170] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:19,298] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:19,424] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:19,549] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:17:19,674] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:03,639] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:21:03,641] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:21:03,642] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:21:03,642] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:21:03,643] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:21:03,644] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:21:03,644] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:21:03,645] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:21:03,646] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:21:03,646] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:21:03,647] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:21:03,648] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:21:03,670] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,672] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,673] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,674] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,676] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,677] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,678] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,679] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,681] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,682] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,683] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,684] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,685] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,687] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,688] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,689] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,690] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,691] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,693] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,694] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:21:03,819] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:03,943] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:04,066] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:04,189] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:04,313] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:04,438] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:04,564] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:04,687] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:04,811] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:21:04,935] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:24,938] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,940] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,941] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,941] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,942] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,943] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,943] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,944] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,944] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,945] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,945] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,946] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,946] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,947] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,948] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,953] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,954] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,955] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,955] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,956] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,956] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,957] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,958] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,958] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,959] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,960] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,960] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,961] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,962] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,962] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:22:24,963] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,963] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,964] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,965] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,965] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:22:24,966] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:22:24,967] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:22:24,967] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:22:24,968] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:22:24,969] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:22:24,969] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:22:24,970] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:22:24,971] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:22:24,972] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:22:24,973] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:22:24,974] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:22:24,974] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:22:24,999] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,000] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,002] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,003] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,005] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,007] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,009] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,010] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,011] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,012] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,014] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,015] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,017] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,019] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,020] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,021] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,023] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,024] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,026] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,028] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:22:25,157] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:25,287] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:25,414] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:25,540] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:25,666] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:25,792] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:25,918] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:26,043] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:26,169] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:22:26,298] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:04,198] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,200] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 198013594@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,202] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 1419360585@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,203] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,204] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,204] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,205] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,205] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,206] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,206] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,207] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,207] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,208] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,209] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,210] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,210] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,211] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,212] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,212] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,213] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,213] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,214] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,215] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,215] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,216] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,216] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,217] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,217] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,218] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,218] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,219] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,220] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,220] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:24:04,221] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,221] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,222] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,222] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,223] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:24:04,224] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:24:04,225] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:24:04,225] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:24:04,226] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:24:04,227] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:24:04,228] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:24:04,228] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:24:04,229] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:24:04,230] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:24:04,231] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:24:04,232] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:24:04,233] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:24:04,235] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,237] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,239] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,240] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,242] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,243] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,244] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,245] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,246] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,248] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,249] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,250] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,251] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,253] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,254] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,255] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,256] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,257] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,259] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,260] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:24:04,386] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:04,513] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:04,638] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:04,763] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:04,890] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:05,018] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:05,145] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:05,271] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:05,398] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:24:05,525] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:53,840] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,842] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 198013594@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,843] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 1419360585@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,845] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,845] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,846] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,846] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,847] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,848] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,848] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,849] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,850] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,850] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,851] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,851] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,852] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,852] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,853] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,854] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,854] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,855] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,855] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,856] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,857] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,857] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,858] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,858] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,859] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,859] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,860] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,861] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,861] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,862] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:26:53,862] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,863] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,863] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,864] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,864] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:26:53,865] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:26:53,866] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:26:53,867] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:26:53,868] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:26:53,868] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:26:53,869] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:26:53,870] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:26:53,870] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:26:53,871] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:26:53,872] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:26:53,872] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:26:53,873] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:26:53,875] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,877] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,878] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,879] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,881] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,883] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,884] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,886] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,887] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,888] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,889] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,890] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,892] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,893] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,894] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,895] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,897] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,898] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,899] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:53,900] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:26:54,030] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:54,158] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:54,287] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:54,416] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:54,544] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:54,671] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:54,798] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:54,926] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:55,053] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:26:55,179] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:06,534] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,537] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 198013594@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,538] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 1419360585@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,540] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,540] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,541] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,542] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,543] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,544] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,544] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,545] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,546] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,547] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,548] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,549] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,549] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,550] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,551] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,551] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,552] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,553] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,553] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,554] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,554] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,555] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,556] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,556] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,557] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,557] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,558] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,559] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,559] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,560] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:27:06,561] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,561] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,562] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,563] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,564] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:27:06,565] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:27:06,566] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:27:06,566] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:27:06,567] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:27:06,569] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:27:06,569] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:27:06,570] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:27:06,571] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:27:06,571] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:27:06,572] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:27:06,572] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:27:06,573] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:27:06,576] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,578] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,579] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,581] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,582] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,584] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,585] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,586] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,588] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,589] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,591] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,592] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,593] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,595] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,597] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,598] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,600] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,601] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,602] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,603] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:27:06,731] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:06,856] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:06,983] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:07,111] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:07,239] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:07,366] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:07,493] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:07,620] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:07,745] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:27:07,870] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:16,830] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:16,832] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 198013594@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:16,834] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 1419360585@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:16,835] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,836] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,836] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,837] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,838] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,839] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,840] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,840] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,841] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,841] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,842] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,842] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,843] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,844] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,844] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,845] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,845] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,846] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,847] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,847] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,848] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,848] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,849] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,849] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,850] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,851] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,851] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,852] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,852] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,853] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:16,854] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,854] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,855] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,855] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,856] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:16,857] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:30:16,857] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:16,858] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:16,859] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:16,860] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:30:16,860] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:16,861] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:30:16,862] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:16,862] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:16,863] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:16,864] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:30:16,864] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:16,998] - [INFO] - [MyOffer] - [module: common:60] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The user logged in successfully as an employee!
+[2022-12-15 21:30:17,001] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,004] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,006] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,009] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,011] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,013] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,015] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,016] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,019] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,021] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,022] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,023] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,025] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,026] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,027] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,029] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,030] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,032] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,034] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,036] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:17,162] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:17,290] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:17,414] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:17,538] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:17,662] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:17,789] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:17,917] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:18,042] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:18,166] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:18,291] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:37,187] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,190] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 198013594@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,191] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 1419360585@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,192] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,193] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,194] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,195] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,195] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,196] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,196] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,197] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,198] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,198] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,199] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,200] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,200] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,201] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,201] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,202] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,203] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,203] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,204] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,204] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,205] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,206] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,206] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,207] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,207] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,208] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,209] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,209] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,210] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,211] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:30:37,211] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,212] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,213] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,213] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,214] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:30:37,215] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:30:37,216] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:37,216] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:37,217] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:37,218] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:30:37,218] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:37,219] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:30:37,220] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:37,221] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:37,222] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:37,222] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:30:37,223] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:30:37,351] - [INFO] - [MyOffer] - [module: common:60] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The user logged in successfully as an employee!
+[2022-12-15 21:30:37,477] - [INFO] - [MyOffer] - [module: common:60] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The user logged in successfully as an employee!
+[2022-12-15 21:30:37,479] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,482] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,484] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,485] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,487] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,488] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,489] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,491] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,492] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,494] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,496] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,497] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,499] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,500] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,501] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,502] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,504] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,506] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,508] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,509] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:30:37,635] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:37,761] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:37,889] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:38,014] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:38,138] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:38,262] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:38,388] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:38,514] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:38,640] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:30:38,767] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:48,931] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:48,934] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 198013594@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:48,935] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 1419360585@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:48,936] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,937] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,937] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,938] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,939] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,939] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,940] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,941] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,941] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,942] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,943] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,943] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,944] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,944] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,945] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,946] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,947] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,947] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,948] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,949] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,949] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,950] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,950] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,951] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,952] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,952] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,953] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,953] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,954] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,954] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:31:48,955] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,956] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,956] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,957] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,957] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:31:48,958] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:31:48,959] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:48,960] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:48,960] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:48,961] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:31:48,962] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:48,962] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:48,963] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:31:48,964] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:48,964] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:48,965] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:48,966] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:31:48,966] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:48,967] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:31:49,093] - [INFO] - [MyOffer] - [module: common:60] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The user logged in successfully as an employee!
+[2022-12-15 21:31:49,220] - [INFO] - [MyOffer] - [module: common:60] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The user logged in successfully as an employee!
+[2022-12-15 21:31:49,222] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,225] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,227] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,229] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,231] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,232] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,235] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,236] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,237] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,238] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,240] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,241] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,242] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,243] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,245] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,246] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,248] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,250] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,251] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,253] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:31:49,379] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:49,505] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:49,630] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:49,757] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:49,882] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:50,007] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:50,132] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:50,259] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:50,384] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:31:50,509] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:21,186] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,189] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 198013594@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,191] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 1419360585@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,192] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,192] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,193] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,194] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,195] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,195] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,196] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,197] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,197] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,198] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - 123451234, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,198] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,199] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,199] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,200] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,201] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyu, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,201] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,202] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,202] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,203] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,203] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,204] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,205] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,205] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,206] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,206] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - swjtu@163., [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,207] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,207] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,208] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,209] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,209] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - *&^%$#@!, [msg] - The form is not valid when logging in: {'email': ['Invalid email address.']}!
+[2022-12-15 21:32:21,210] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,210] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,211] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,211] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,212] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] -       , [msg] - The form is not valid when logging in: {'email': ['This field is required.']}!
+[2022-12-15 21:32:21,213] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:32:21,214] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,215] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,216] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,217] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:32:21,218] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,218] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,219] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:32:21,220] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,221] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,221] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,222] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['This field is required.']}!
+[2022-12-15 21:32:21,223] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,223] - [WARNING] - [MyOffer] - [module: common:104] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The form is not valid when logging in: {'password': ['Field must be between 6 and 20 characters long.']}!
+[2022-12-15 21:32:21,349] - [INFO] - [MyOffer] - [module: common:60] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The user logged in successfully as an employee!
+[2022-12-15 21:32:21,474] - [INFO] - [MyOffer] - [module: common:60] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [msg] - The user logged in successfully as an employee!
+[2022-12-15 21:32:21,476] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,477] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,479] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,480] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,483] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - mn20kk@leeds.ac.uk, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,484] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,486] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,487] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,489] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,490] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - 123451234@qq.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,492] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,493] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,494] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,496] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,497] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - pangyu@gmail.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,499] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,500] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,501] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,502] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,504] - [WARNING] - [MyOffer] - [module: common:50] : [IP] - 127.0.0.1, [email] - swjtu@163.com, [msg] - The email is not registered when logging in!
+[2022-12-15 21:32:21,631] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:21,757] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:21,883] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:22,007] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:22,134] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [password] - 123.abc, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:22,259] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123456, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:22,384] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcdefg, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:22,511] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - abcd1234, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:22,638] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - *&^%$#@!, [msg] - The password is wrong when logging in!
+[2022-12-15 21:32:22,764] - [WARNING] - [MyOffer] - [module: common:71] : [IP] - 127.0.0.1, [email] - pangyuli92@gmail.com, [password] - 123.abc, [msg] - The password is wrong when logging in!
