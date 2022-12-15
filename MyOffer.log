@@ -1,0 +1,8 @@
+[2022-12-15 19:43:16,618] - [WARNING] - [MyOffer] - [module: employee:233] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - Resume sent failed because the resume has already sent before!
+[2022-12-15 19:43:28,447] - [INFO] - [MyOffer] - [module: common:261] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The employee avatar is got successfully!
+[2022-12-15 19:43:30,414] - [INFO] - [MyOffer] - [module: employee:101] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - delete resume successfully
+[2022-12-15 19:43:51,596] - [INFO] - [MyOffer] - [module: common:221] : [IP] - 127.0.0.1, [email] - mn20pl@leeds.ac.uk, [msg] - The employee logged out successfully!
+[2022-12-15 19:44:03,366] - [INFO] - [MyOffer] - [module: common:88] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - The user logged in successfully as an employer!
+[2022-12-15 19:44:09,924] - [INFO] - [MyOffer] - [module: employer:44] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - Update basic info successfully!
+[2022-12-15 19:44:57,487] - [INFO] - [MyOffer] - [module: employer:94] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - Add a new post LOL Dev successfully!
+[2022-12-15 19:45:08,666] - [INFO] - [MyOffer] - [module: common:236] : [IP] - 127.0.0.1, [email] - mn20xy@leeds.ac.uk, [msg] - The employer logged out successfully!

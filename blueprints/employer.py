@@ -4,7 +4,7 @@ from flask_restful import Api, Resource, reqparse, fields, marshal_with
 import datetime
 
 from models import Employer, Post
-from exts import db
+from exts import db, logger
 
 from utils import verifyToken, generateToken, verifyEmployerToken, emailByTokenStr
 
@@ -33,16 +33,22 @@ class BasicInfo(Resource):
         try:
             employer.dateOfEstablishment = datetime.datetime.strptime(request.json.get('dateOfEstablishment')[:10], '%Y-%m-%d')
         except Exception as e:
-            print(str(e))
+            logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (
+                request.remote_addr, email, 'Invalid date of establishment when updating basic info!'))
             employer.dateOfEstablishment = None
         employer.location = request.json.get('location')
         employer.staff = request.json.get('staff')
         employer.introduction = request.json.get('introduction')
         try:
             db.session.commit()
+            logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (
+                request.remote_addr, email, 'Update basic info successfully!'))
             return jsonify({'status': 200, 'msg': 'Update profile successfully!',
                             'data' :{'email': email, 'name': employer.name, 'CEO': employer.CEO, 'researchDirection': employer.researchDirection, 'dateOfEstablishment': employer.dateOfEstablishment, 'location': employer.location, 'staff': employer.staff, 'introduction': employer.introduction}})
         except Exception as e:
+            db.session.rollback()
+            logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (
+                request.remote_addr, email, 'Update basic info failed because of %s!') % e)
             return jsonify({'status': 403, 'msg': str(e)})
 
     @verifyEmployerToken
@@ -85,8 +91,13 @@ class Posts(Resource):
         try:
             db.session.add(post)
             db.session.commit()
+            logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (
+                request.remote_addr, email, 'Add a new post %s successfully!') % title)
             return jsonify({'status': 200, 'msg': 'Post added successfully!'})
         except Exception as e:
+            db.session.rollback()
+            logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (
+                request.remote_addr, email, 'Add a new post %s failed because of %s!') % (title, e))
             return jsonify({'status': 403, 'msg': str(e)})
 
     @verifyEmployerToken
@@ -100,11 +111,17 @@ class Posts(Resource):
     @verifyEmployerToken
     def delete(self):
         post = Post.query.filter_by(pid=request.json.get('pid')).first()
+        employer = Employer.query.filter_by(uid=post.employerId).first()
         try:
             db.session.delete(post)
             db.session.commit()
+            logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (
+                request.remote_addr, employer.name, 'Delete post %s successfully!') % post.title)
             return jsonify({'status': 200, 'msg': 'Post deleted successfully!'})
         except Exception as e:
+            db.session.rollback()
+            logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (
+                request.remote_addr, employer.name, 'Delete post %s failed because of %s!') % (post.title, e))
             return jsonify({'status': 403, 'msg': str(e)})
 
 
@@ -132,8 +149,13 @@ class OnePost(Resource):
             post.inRecruitment = False
         try:
             db.session.commit()
+            logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (
+                request.remote_addr, post.employer.name, 'Update post %s successfully!') % post.title)
             return jsonify({'status': 200, 'msg': 'Post updated successfully!'})
         except Exception as e:
+            db.session.rollback()
+            logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (
+                request.remote_addr, post.employer.name, 'Update post %s failed because of %s!') % (post.title, e))
             return jsonify({'status': 403, 'msg': str(e)})
 
 

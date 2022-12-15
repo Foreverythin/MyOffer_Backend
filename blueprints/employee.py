@@ -6,7 +6,7 @@ from flask_mail import Message
 from flask_restful import Api, Resource
 
 from models import Employee, Post, Employer, PostEmployee
-from exts import db, mail
+from exts import db, mail, logger
 from app import app
 
 from config import SECRET_KEY
@@ -32,8 +32,11 @@ class Profile(Resource):
         employee.tel = request.json.get('tel')
         try:
             db.session.commit()
+            logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'update profile successfully'))
             return jsonify({'status': 200, 'msg': 'Update profile successfully!'})
         except Exception as e:
+            db.session.rollback()
+            logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'update profile failed'))
             return jsonify({'status': 403, 'msg': str(e)})
 
     @verifyEmployeeToken
@@ -66,8 +69,11 @@ class Resume(Resource):
         employee.resume = resumeFileName
         try:
             db.session.commit()
+            logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'upload resume %s successfully') % resumeFileName)
             return jsonify({'status': 200, 'msg': 'Upload resume successfully!'})
         except Exception as e:
+            db.session.rollback()
+            logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'upload resume %s failed') % resumeFileName)
             return jsonify({'status': 403, 'msg': str(e)})
 
     @verifyEmployeeToken
@@ -92,8 +98,11 @@ class Resume(Resource):
             employee.resume = None
             try:
                 db.session.commit()
+                logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'delete resume successfully'))
                 return jsonify({'status': 200, 'msg': 'Delete resume successfully!'})
             except Exception as e:
+                db.session.rollback()
+                logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'delete resume failed'))
                 return jsonify({'status': 403, 'msg': str(e)})
         else:
             return jsonify({'status': 200, 'msg': 'No resume uploaded!'})
@@ -106,8 +115,11 @@ class DownloadResume(Resource):
         email = emailByTokenStr(tokenStr)
         employee = Employee.query.filter_by(email=email).first()
         if employee.resume is not None:
+            logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (
+            request.remote_addr, email, 'download resume %s successfully' % employee.resume))
             return send_file(RESUME_UPLOAD_FOLDER + employee.resume, mimetype='application/pdf')
         else:
+            logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'download resume failed - no resume uploaded'))
             return jsonify({'status': 400, 'msg': 'No resume uploaded!'})
 
 
@@ -218,6 +230,7 @@ class SendResume(Resource):
         employee = Employee.query.filter_by(email=email).first()
         existingPostEmployee = PostEmployee.query.filter_by(pid=postID, uid=employee.uid).first()
         if existingPostEmployee is not None:
+            logger.warning('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'Resume sent failed because the resume has already sent before!'))
             return jsonify({'status': 400, 'msg': 'Resume already sent!'})
         if employee.resume is not None:
             employer = Employer.query.filter_by(uid=post.employerId).first()
@@ -230,10 +243,15 @@ class SendResume(Resource):
             db.session.add(post_employee)
             try:
                 db.session.commit()
+                logger.info(
+                    '[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'Resume sent successfully!'))
                 return jsonify({'status': 200, 'msg': 'Resume sent successfully!'})
             except Exception as e:
+                db.session.rollback()
+                logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'Resume sent failed because of %s!' % e))
                 return jsonify({'status': 403, 'msg': str(e)})
         else:
+            logger.warning('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'Resume sent failed because the resume is not uploaded!'))
             return jsonify({'status': 411, 'msg': 'No resume uploaded! Please upload your resume first!'})
 
 
