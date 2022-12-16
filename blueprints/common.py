@@ -71,7 +71,7 @@ class Login(Resource):
                     logger.warning('[IP] - %s, [email] - %s, [password] - %s, [msg] - %s' % (
                         request.remote_addr, form.email.data, form.password.data,
                         'The password is wrong when logging in!'))
-                    return {'status': 401, 'msg': 'Invalid email or password!'}
+                    return jsonify({'status': 401, 'msg': 'Invalid email or password!'})
             else:
                 employer = Employer.query.filter_by(email=form.email.data).first()
                 if employer is None:
@@ -99,12 +99,12 @@ class Login(Resource):
                     logger.warning('[IP] - %s, [email] - %s, [password] - %s, [msg] - %s' % (
                         request.remote_addr, form.email.data, form.password.data,
                         'The password is wrong when logging in!'))
-                    return {'status': 401, 'msg': 'Invalid email or password!'}
+                    return jsonify({'status': 401, 'msg': 'Invalid email or password!'})
         else:
             logger.warning('[IP] - %s, [email] - %s, [msg] - %s' % (
                 request.remote_addr, form.email.data,
                 'The form is not valid when logging in: %s!' % form.errors))
-            return {'status': 402, 'msg': form.errors}
+            return jsonify({'status': 402, 'msg': form.errors})
 
 
 class Register(Resource):
@@ -215,6 +215,16 @@ class Logout(Resource):
         payload = jwt.decode(token, SECRET_KEY)
         if userType == 'employee':
             employee = Employee.query.filter_by(email=payload['email']).first()
+            if not employee:
+                logger.warning('[IP] - %s, [email] - %s, [msg] - %s' % (
+                    request.remote_addr, payload['email'],
+                    'Wrong email when logging out as an employee!'))
+                return jsonify({'status': 401, 'msg': 'The user is not an employee!'})
+            if employee.logged is False:
+                logger.warning('[IP] - %s, [email] - %s, [msg] - %s' % (
+                    request.remote_addr, payload['email'],
+                    'The user has already logged out as an employee!'))
+                return jsonify({'status': 414, 'msg': 'The user has already logged out!'})
             employee.logged = False
             try:
                 db.session.commit()
@@ -230,6 +240,16 @@ class Logout(Resource):
             return jsonify({'status': 200, 'msg': 'Successfully logged out!'})
         elif userType == 'employer':
             employer = Employer.query.filter_by(email=payload['email']).first()
+            if not employer:
+                logger.warning('[IP] - %s, [email] - %s, [msg] - %s' % (
+                    request.remote_addr, payload['email'],
+                    'Wrong email when logging out as an employer!'))
+                return jsonify({'status': 401, 'msg': 'The user is not an employer!'})
+            if employer.logged is False:
+                logger.warning('[IP] - %s, [email] - %s, [msg] - %s' % (
+                    request.remote_addr, payload['email'],
+                    'The user has already logged out as an employer!'))
+                return jsonify({'status': 414, 'msg': 'The user has already logged out!'})
             employer.logged = False
             try:
                 db.session.commit()

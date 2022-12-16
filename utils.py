@@ -26,7 +26,6 @@ def verifyToken(func):
         if token:
             try:
                 payload = jwt.decode(token, SECRET_KEY)
-                print('userType: ', userType)
                 if userType == 'employee':
                     employee = Employee.query.filter_by(email=payload['email']).first()
                     if employee and employee.logged:
