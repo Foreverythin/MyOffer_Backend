@@ -10,7 +10,7 @@ from exts import db, mail, logger
 from app import app
 
 from config import SECRET_KEY
-from utils import verifyEmployeeToken, emailByTokenStr
+from utils import verifyEmployeeToken, emailByTokenStr, validTel
 
 RESUME_UPLOAD_FOLDER = 'upload/resume/'
 
@@ -30,6 +30,14 @@ class Profile(Resource):
         employee.major = request.json.get('major')
         employee.degree = request.json.get('degree')
         employee.tel = request.json.get('tel')
+        if not validTel(employee.tel):
+            return jsonify({'status': 415, 'msg': 'Invalid telephone number!'})
+        if int(employee.age) < 18 or int(employee.age) > 120:
+            return jsonify({'status': 416, 'msg': 'Invalid age!'})
+        if employee.gender == '':
+            return jsonify({'status': 417, 'msg': 'Invalid gender!'})
+        if employee.gender != 'male' and employee.gender != 'female':
+            return jsonify({'status': 417, 'msg': 'Invalid gender!'})
         try:
             db.session.commit()
             logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (request.remote_addr, email, 'update profile successfully'))
@@ -63,6 +71,8 @@ class Resume(Resource):
         resumeFileName = email + '_' + resume.filename
         # delete the old resume
         employee = Employee.query.filter_by(email=email).first()
+        print('------------------')
+        print(employee.resume)
         if employee.resume:
             os.remove(RESUME_UPLOAD_FOLDER + employee.resume)
         resume.save(os.path.join(RESUME_UPLOAD_FOLDER, resumeFileName))
@@ -190,6 +200,8 @@ class PostInfo(Resource):
     def get(self):
         postID = request.args.get('postID')
         post = Post.query.filter_by(pid=postID).first()
+        if post is None:
+            return jsonify({'status': 418, 'msg': 'No such post!'})
         employerId = post.employerId
         employer = Employer.query.filter_by(uid=employerId).first()
         if employer.dateOfEstablishment is None:
@@ -206,14 +218,14 @@ class SimilarPosts(Resource):
     def get(self):
         postID = request.args.get('postID')
         post = Post.query.filter_by(pid=postID).first()
+        if post is None:
+            return jsonify({'status': 418, 'msg': 'No such post!'})
         label = post.label
         similarPosts = Post.query.filter_by(label=label).all()
         posts = []
         for post in similarPosts:
             if post.pid != int(postID):
                 posts.append({'post_id': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label})
-
-        print(posts)
 
         return jsonify({'status': 200, 'msg': 'Similar posts fetched successfully!', 'data': {'posts': posts}})
 
@@ -223,6 +235,8 @@ class SendResume(Resource):
     def post(self):
         postID = request.json.get('postID')
         post = Post.query.filter_by(pid=postID).first()
+        if post is None:
+            return jsonify({'status': 418, 'msg': 'No such post!'})
         if not post.inRecruitment:
             return jsonify({'status': 400, 'msg': 'This post is not in recruitment!'})
         tokenStr = request.headers.get('Authorization')[9:]

@@ -115,6 +115,10 @@ class Register(Resource):
         form.password.data = args['password']
         form.confirmedPassword.data = args['confirmedPassword']
         form.captcha.data = args['captcha']
+        if len(form.password.data) < 6 or len(form.password.data) > 18:
+            return jsonify({'status': 402, 'msg': 'The length of password should be between 6 and 18!'})
+        if form.password.data != form.confirmedPassword.data:
+            return jsonify({'status': 402, 'msg': 'The two passwords are not the same!'})
         try:
             if form.validate() and form.validateEmail(form.email) and form.validateCaptcha(form.captcha):
                 if userType == 'employee':

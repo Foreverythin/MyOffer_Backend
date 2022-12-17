@@ -50,3 +50,7 @@ if __name__ == '__main__':
 # 412: the resume is already sent
 # 413: the resume is out of recruitment
 # 414: have already logged out
+# 415: invalid tel
+# 416: invalid age
+# 417: invalid gender
+# 418: No such post!

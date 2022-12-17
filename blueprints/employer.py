@@ -150,12 +150,12 @@ class OnePost(Resource):
         try:
             db.session.commit()
             logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (
-                request.remote_addr, post.employer.name, 'Update post %s successfully!') % post.title)
+                request.remote_addr, post.employerId, 'Update post %s successfully!') % post.title)
             return jsonify({'status': 200, 'msg': 'Post updated successfully!'})
         except Exception as e:
             db.session.rollback()
             logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (
-                request.remote_addr, post.employer.name, 'Update post %s failed because of %s!') % (post.title, e))
+                request.remote_addr, post.employerId, 'Update post %s failed because of %s!') % (post.title, e))
             return jsonify({'status': 403, 'msg': str(e)})
 
 

@@ -2,6 +2,7 @@ from authlib.jose import jwt, JoseError
 from functools import wraps
 from config import SECRET_KEY
 from flask import request, jsonify
+import re
 
 from models import Employee, Employer
 
@@ -101,3 +102,10 @@ def emailByTokenStr(tokenStr):
     email = payload.get('email')
 
     return email
+
+
+def validTel(telStr):
+    if re.match(r'^1[3-9]\d{9}$', telStr):
+        return True
+    else:
+        return False
