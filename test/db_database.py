@@ -2,9 +2,11 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 
+# create the app for testing
 app = Flask(__name__)
 
 
+# set the configuration of the test database
 class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
@@ -15,8 +17,10 @@ class Config(object):
     app.config["SECRET_KEY"] = "AVerySimpleKey"
 
 
+# config the app
 app.config.from_object(Config)
 
+# sqlalchemy database
 db = SQLAlchemy(app)
 
 

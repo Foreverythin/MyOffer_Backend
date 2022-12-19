@@ -1,3 +1,8 @@
+"""
+This file includes some forms which corresponds to the forms in the frontend.
+
+Data validation is included in the form classes.
+"""
 from flask import request
 import wtforms
 from datetime import datetime
@@ -8,11 +13,13 @@ from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, Le
 from models import Employer, Employee, Captcha
 
 
+# the form is used to validate the login form
 class LoginForm(wtforms.Form):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired(), Length(min=6, max=20)])
 
 
+# the form is used to validate the register form
 class RegisterForm(wtforms.Form):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired(), Length(min=6, max=20)])
@@ -21,8 +28,11 @@ class RegisterForm(wtforms.Form):
     captcha = StringField('Captcha', validators=[DataRequired(), Length(min=4, max=4)])
 
     def validateEmail(self, field):
-        email = field.data
-        employee = Employee.query.filter_by(email=email).first()
+        """
+        Check if the email has already existed.
+        """
+        email = field.data  # get email from request
+        employee = Employee.query.filter_by(email=email).first()  # check if the email has already existed in employee table
         if employee:
             raise ValidationError('Email already registered as an identity of an employee')
         employer = Employer.query.filter_by(email=email).first()
@@ -31,8 +41,11 @@ class RegisterForm(wtforms.Form):
         return True
 
     def validateCaptcha(self, field):
-        captcha = field.data
-        email = self.email.data
+        """
+        Check if the captcha is valid.
+        """
+        captcha = field.data  # get captcha from request
+        email = self.email.data  # get email from the form
         captchaModel = Captcha.query.filter_by(email=email).order_by(Captcha.createdTime.desc()).first()
         if not captchaModel or captchaModel.captcha.lower() != captcha.lower() or captchaModel.createdTime + timedelta(
                 minutes=5) < datetime.now():
@@ -40,6 +53,7 @@ class RegisterForm(wtforms.Form):
         return True
 
 
+# the form is used to validate the employee's profile form
 class EmployeeProfile(wtforms.Form):
     name = StringField('Name', validators=[DataRequired()])
     gender = StringField('Gender', validators=[DataRequired()])
@@ -49,6 +63,7 @@ class EmployeeProfile(wtforms.Form):
     tel = StringField('Tel', validators=[DataRequired(), Length(min=11, max=11)])
 
 
+# the form is used to validate the employer's profile form
 class EmployerProfile(wtforms.Form):
     name = StringField('Name', validators=[DataRequired()])
     CEO = StringField('CEO', validators=[DataRequired()])
@@ -59,6 +74,7 @@ class EmployerProfile(wtforms.Form):
     introduction = StringField('Introduction', validators=[DataRequired()])
 
 
+# the form is used to validate the post form
 class Post(wtforms.Form):
     title = StringField('Title', validators=[DataRequired()])
     salary = IntegerField('Salary', validators=[DataRequired(), validators.NumberRange(min=2000, max=30000)])
@@ -69,6 +85,7 @@ class Post(wtforms.Form):
     inRecruitment = BooleanField('In Recruitment', validators=[DataRequired()])
 
 
+# the form is used to validate the post list form
 class PostList(wtforms.Form):
     title = StringField('Title', validators=[DataRequired()])
     city = StringField('City', validators=[DataRequired()])

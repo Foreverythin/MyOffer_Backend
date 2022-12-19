@@ -1,3 +1,8 @@
+"""
+This file includes the database tests.
+
+All 9 functions are used to test the database, and pass the tests.
+"""
 import datetime
 import unittest
 from db_database import app, db, Employee, Employer, Post, Captcha, PostEmployee
@@ -21,7 +26,7 @@ class TestUserTable(unittest.TestCase):
         db.session.commit()
 
     def test_append_data(self):
-        # employee
+        # employee, add a new employee
         employee = Employee(email='mn20pl@leeds.ac.uk', password='lpy..2002', logged=True)
         db.session.add(employee)
         db.session.commit()
@@ -35,7 +40,7 @@ class TestUserTable(unittest.TestCase):
         self.assertEqual(employee_info.major, 'Your Major')
         self.assertEqual(employee_info.degree, 'Your Degree')
 
-        # employer
+        # employer, add a new employer
         employer = Employer(email='mn20xy@leeds.ac.uk', password='lpy..2002', logged=True)
         db.session.add(employer)
         db.session.commit()
@@ -49,7 +54,7 @@ class TestUserTable(unittest.TestCase):
         time.sleep(1)
 
     def test_edit_data(self):
-        # employee
+        # employee, edit the data of an employee
         employee_info = Employee.query.filter_by(email='pangyuli92@gmail.com').first()
         employee_info.name = 'Yuli'
         employee_info.tel = '12345678900'
@@ -59,7 +64,7 @@ class TestUserTable(unittest.TestCase):
         self.assertEqual(employee_info.name, 'Yuli')
         self.assertEqual(employee_info.tel, '12345678900')
         self.assertEqual(employee_info.major, 'Computer Science')
-        # employer
+        # employer, edit the data of an employer
         employer_info = Employer.query.filter_by(email='mn20xx@leeds.ac.uk').first()
         employer_info.name = 'TIMI'
         employer_info.CEO = 'Yuli'
@@ -69,14 +74,14 @@ class TestUserTable(unittest.TestCase):
         self.assertEqual(employer_info.CEO, 'Yuli')
 
     def test_delete_data(self):
-        # employee
+        # employee, delete an employee
         employee_info = Employee.query.filter_by(email='pangyuli92@gmail.com').first()
         db.session.delete(employee_info)
         db.session.commit()
         employee_info = Employee.query.filter_by(email='pangyuli92@gmail.com').first()
         self.assertIsNone(employee_info)
 
-        # employer
+        # employer, delete an employer
         employer_info = Employer.query.filter_by(email='mn20xx@leeds.ac.uk').first()
         db.session.delete(employer_info)
         db.session.commit()
@@ -107,7 +112,7 @@ class TestPostTable(unittest.TestCase):
         db.session.commit()
 
     def test_append_data(self):
-        # post
+        # post, add a new post
         post = Post(title='unittest2', salary=6000, degree='Doctor', label='C#', tasks='The post2 is for unittest', requirements='requirements', inRecruitment=True, employerId=1)
         db.session.add(post)
         db.session.commit()
@@ -126,7 +131,7 @@ class TestPostTable(unittest.TestCase):
         time.sleep(1)
 
     def test_edit_data(self):
-        # post
+        # post, edit the data of a post
         post_info = Post.query.filter_by(title='unittest').first()
         post_info.title = 'unittest2'
         post_info.salary = 6000
@@ -146,7 +151,7 @@ class TestPostTable(unittest.TestCase):
         self.assertEqual(post_info.inRecruitment, False)
 
     def test_delete_data(self):
-        # post
+        # post, delete a post
         post_info = Post.query.filter_by(title='unittest').first()
         db.session.delete(post_info)
         db.session.commit()
@@ -177,7 +182,7 @@ class TestCaptchaTable(unittest.TestCase):
         db.session.commit()
 
     def test_append_data(self):
-        # captcha
+        # captcha, add a new captcha
         captcha = Captcha(captchaId='2', email='mn20yy@leeds.ac.uk', captcha='1234', createdTime=datetime.datetime.now())
         db.session.add(captcha)
         db.session.commit()
@@ -208,7 +213,7 @@ class TestPostEmployeeTable(unittest.TestCase):
         db.session.commit()
 
     def test_append_data(self):
-        # post_employee
+        # post_employee, add a new post_employee
         post_employee = PostEmployee(pid=2, uid=2)
         db.session.add(post_employee)
         db.session.commit()

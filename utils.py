@@ -1,3 +1,6 @@
+"""
+The file defines some tool functions which will be used in the blueprints.
+"""
 from authlib.jose import jwt, JoseError
 from functools import wraps
 from config import SECRET_KEY
@@ -8,6 +11,9 @@ from models import Employee, Employer
 
 
 def generateToken(email):
+    """
+    Generate a token for the user with the email.
+    """
     header = {'alg': 'HS256'}
     payload = {'email': email}
     token = jwt.encode(header, payload, SECRET_KEY)
@@ -16,27 +22,29 @@ def generateToken(email):
     return tokenStr
 
 
-# define a decorator to check the token: employee and employer
 def verifyToken(func):
+    """
+    Define a decorator to check the token: employee and employer
+    """
     def wrapper(self, userType, *args, **kwargs):
-        tokenStr = request.headers.get('Authorization')
-        if tokenStr is None:
+        tokenStr = request.headers.get('Authorization')  # get the token from the header
+        if tokenStr is None:  # no token
             return jsonify({'status': 410, 'msg': 'Please log in first!'})
         token = tokenStr[9:]
-        token = bytes(token, encoding="utf8")
+        token = bytes(token, encoding="utf8")  # convert the token to bytes
         if token:
             try:
-                payload = jwt.decode(token, SECRET_KEY)
-                if userType == 'employee':
+                payload = jwt.decode(token, SECRET_KEY)  # decode the token
+                if userType == 'employee':  # check the user type
                     employee = Employee.query.filter_by(email=payload['email']).first()
-                    if employee and employee.logged:
-                        return func(self, userType)
+                    if employee and employee.logged:  # check if the user has logged in
+                        return func(self, userType)  # call the function
                     else:
                         return jsonify({'status': 410, 'msg': 'Please log in first!'})
-                elif userType == 'employer':
+                elif userType == 'employer':  # check the user type
                     employer = Employer.query.filter_by(email=payload['email']).first()
-                    if employer and employer.logged:
-                        return func(self, userType)
+                    if employer and employer.logged:  # check if the user has logged in
+                        return func(self, userType)  # call the function
                     else:
                         return jsonify({'status': 410, 'msg': 'Please log in first!'})
                 else:
@@ -48,21 +56,23 @@ def verifyToken(func):
     return wrapper
 
 
-# define a decorator to check the token: employee
 def verifyEmployeeToken(func):
+    """
+    Define a decorator to check the token: employee.
+    """
     @wraps(func)
     def wrapper(self, *args, **kwargs):
-        tokenStr = request.headers.get('Authorization')
-        if tokenStr is None:
+        tokenStr = request.headers.get('Authorization')  # get the token from the header
+        if tokenStr is None:  # no token
             return jsonify({'status': 410, 'msg': 'Please log in first!'})
         token = tokenStr[9:]
-        token = bytes(token, encoding="utf8")
+        token = bytes(token, encoding="utf8")  # convert the token to bytes
         if token:
             try:
-                payload = jwt.decode(token, SECRET_KEY)
-                employee = Employee.query.filter_by(email=payload['email']).first()
-                if employee and employee.logged:
-                    return func(self, *args, **kwargs)
+                payload = jwt.decode(token, SECRET_KEY)   # decode the token
+                employee = Employee.query.filter_by(email=payload['email']).first()  # get the user
+                if employee and employee.logged:  # check if the user has logged in
+                    return func(self, *args, **kwargs)  # call the function
                 else:
                     return jsonify({'status': 410, 'msg': 'Please log in first!'})
             except JoseError as e:
@@ -72,21 +82,23 @@ def verifyEmployeeToken(func):
     return wrapper
 
 
-# define a decorator to check the token: employer
 def verifyEmployerToken(func):
+    """
+    Define a decorator to check the token: employer.
+    """
     @wraps(func)
     def wrapper(self, *args, **kwargs):
-        tokenStr = request.headers.get('Authorization')
-        if tokenStr is None:
+        tokenStr = request.headers.get('Authorization')  # get the token from the header
+        if tokenStr is None:  # no token
             return jsonify({'status': 410, 'msg': 'Please log in first!'})
         token = tokenStr[9:]
-        token = bytes(token, encoding="utf8")
+        token = bytes(token, encoding="utf8")  # convert the token to bytes
         if token:
             try:
-                payload = jwt.decode(token, SECRET_KEY)
-                employer = Employer.query.filter_by(email=payload['email']).first()
-                if employer and employer.logged:
-                    return func(self, *args, **kwargs)
+                payload = jwt.decode(token, SECRET_KEY)  # decode the token
+                employer = Employer.query.filter_by(email=payload['email']).first()  # get the user
+                if employer and employer.logged:  # check if the user has logged in
+                    return func(self, *args, **kwargs)  # call the function
                 else:
                     return jsonify({'status': 410, 'msg': 'Please log in first!'})
             except JoseError as e:
@@ -97,6 +109,9 @@ def verifyEmployerToken(func):
 
 
 def emailByTokenStr(tokenStr):
+    """
+    Get the email from the token string.
+    """
     token = bytes(tokenStr, encoding="utf8")
     payload = jwt.decode(token, SECRET_KEY)
     email = payload.get('email')
@@ -105,6 +120,9 @@ def emailByTokenStr(tokenStr):
 
 
 def validTel(telStr):
+    """
+    Check if the telephone number is valid.
+    """
     if re.match(r'^1[3-9]\d{9}$', telStr):
         return True
     else:

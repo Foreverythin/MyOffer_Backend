@@ -4,4 +4,4 @@
 export FLASK_APP=app.py
 
 # run the app
-flask run --port 8000 --host 0.0.0.0
+flask run --port 8000

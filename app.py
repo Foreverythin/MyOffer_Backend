@@ -1,3 +1,8 @@
+"""
+This is the main function of the program.
+
+It imports all the blueprints and runs the app.
+"""
 from flask import Flask
 from flask_migrate import Migrate
 import config

@@ -1,3 +1,8 @@
+"""
+This files includes all api tests.
+
+All 46 functions are tested and passed.
+"""
 import unittest
 import json
 
@@ -5,13 +10,14 @@ from app import app
 from models import Employee, Employer, Post, db, Captcha
 
 
+# Test login of employees
 class TestEmployeeLogin(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # set up the app and logged in tokens
         self.app = app.test_client()
         self.app.testing = True
         self.loggedToken = []
 
-    def test_wrong_password(self):
+    def test_wrong_password(self):  # test wrong password
         emails = ['mn20pl@leeds.ac.uk', 'pangyuli92@gmail.com']
         passwords = ['123456', 'abcdefg', 'abcd1234', '*&^%$#@!', '123.abc']
         for email in emails:
@@ -26,7 +32,7 @@ class TestEmployeeLogin(unittest.TestCase):
                 msg = resp_dict['msg']
                 self.assertEqual(msg, 'Invalid email or password!')
 
-    def test_invalid_password(self):
+    def test_invalid_password(self):  # test invalid password
         emails = ['mn20pl@leeds.ac.uk', 'pangyuli92@gmail.com']
         passwords = ['', '12345', '*.&', '00000', '     ', '1 2 a', 'a_very_long_long_password']
         for email in emails:
@@ -39,7 +45,7 @@ class TestEmployeeLogin(unittest.TestCase):
                 status = resp_dict['status']
                 self.assertEqual(status, 402)
 
-    def test_unregistered_email(self):
+    def test_unregistered_email(self):  # test unregistered email
         emails = ['mn20kk@leeds.ac.uk', '123451234@qq.com', 'pangyu@gmail.com', 'swjtu@163.com']
         passwords = ['123456', 'abcdef', '123abc', '123.abc', '*&^%$#@!']
         for email in emails:
@@ -54,7 +60,7 @@ class TestEmployeeLogin(unittest.TestCase):
                 msg = resp_dict['msg']
                 self.assertEqual(msg, 'Account does not exist!')
 
-    def test_invaild_email(self):
+    def test_invaild_email(self):  # test invalid email
         emails = ['', '123451234', 'pangyu', 'swjtu@163', 'swjtu@163.', '*&^%$#@!', '      ']
         passwords = ['123456', 'abcdef', '123abc', '123.abc', '*&^%$#@!']
         for email in emails:
@@ -67,7 +73,7 @@ class TestEmployeeLogin(unittest.TestCase):
                 status = resp_dict['status']
                 self.assertEqual(status, 402)
 
-    def test_employer_email(self):
+    def test_employer_email(self):  # test employer email
         emails = ['mn20xy@leeds.ac.uk', '198013594@qq.com', '1419360585@qq.com']
         password = 'lpy..2002'
         for email in emails:
@@ -81,7 +87,7 @@ class TestEmployeeLogin(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Account does not exist!')
 
-    def test_right_password(self):
+    def test_right_password(self):  # test right password
         emails = ['mn20pl@leeds.ac.uk', 'pangyuli92@gmail.com']
         password = 'lpy..2002'
         for email in emails:
@@ -96,7 +102,7 @@ class TestEmployeeLogin(unittest.TestCase):
             self.assertEqual(msg, 'Successfully logged in!')
             self.loggedToken.append(resp_dict['token'])
 
-    def tearDown(self):
+    def tearDown(self):  # delete all logged in tokens
         with app.app_context():
             employee1 = Employee.query.filter_by(email='mn20pl@leeds.ac.uk').first()
             employee2 = Employee.query.filter_by(email='pangyuli92@gmail.com').first()
@@ -104,13 +110,14 @@ class TestEmployeeLogin(unittest.TestCase):
             employee2.logged = False
 
 
+# Test login of employers
 class TestEmployerLogin(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # set up the app and logged in tokens
         self.app = app.test_client()
         self.app.testing = True
         self.loggedToken = []
 
-    def test_wrong_password(self):
+    def test_wrong_password(self):  # test wrong password
         emails = ['mn20xy@leeds.ac.uk', '198013594@qq.com', '1419360585@qq.com']
         passwords = ['123456', 'abcdefg', 'abcd1234', '*&^%$#@!', '123.abc']
         for email in emails:
@@ -125,7 +132,7 @@ class TestEmployerLogin(unittest.TestCase):
                 msg = resp_dict['msg']
                 self.assertEqual(msg, 'Invalid email or password!')
 
-    def test_invalid_password(self):
+    def test_invalid_password(self):  # test invalid password
         emails = ['mn20xy@leeds.ac.uk', '198013594@qq.com', '1419360585@qq.com']
         passwords = ['', '12345', '*.&', '00000', '     ', '1 2 a', 'a_very_long_long_password']
         for email in emails:
@@ -138,7 +145,7 @@ class TestEmployerLogin(unittest.TestCase):
                 status = resp_dict['status']
                 self.assertEqual(status, 402)
 
-    def test_unregistered_email(self):
+    def test_unregistered_email(self):  # test unregistered email
         emails = ['mn20kk@leeds.ac.uk', '123451234@qq.com', 'pangyu@gmail.com', 'swjtu@163.com']
         passwords = ['123456', 'abcdef', '123abc', '123.abc', '*&^%$#@!']
         for email in emails:
@@ -153,7 +160,7 @@ class TestEmployerLogin(unittest.TestCase):
                 msg = resp_dict['msg']
                 self.assertEqual(msg, 'Account does not exist!')
 
-    def test_invaild_email(self):
+    def test_invaild_email(self):  # test invalid email
         emails = ['', '123451234', 'pangyu', 'swjtu@163', 'swjtu@163.', '*&^%$#@!', '      ']
         passwords = ['123456', 'abcdef', '123abc', '123.abc', '*&^%$#@!']
         for email in emails:
@@ -166,7 +173,7 @@ class TestEmployerLogin(unittest.TestCase):
                 status = resp_dict['status']
                 self.assertEqual(status, 402)
 
-    def test_employee_email(self):
+    def test_employee_email(self):      # test employee email
         emails = ['mn20pl@leeds.ac.uk', 'pangyuli92@gmail.com']
         password = 'lpy..2002'
         for email in emails:
@@ -180,7 +187,7 @@ class TestEmployerLogin(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Account does not exist!')
 
-    def test_right_password(self):
+    def test_right_password(self):  # test right password
         emails = ['mn20xy@leeds.ac.uk', '198013594@qq.com', '1419360585@qq.com']
         password = 'lpy..2002'
         for email in emails:
@@ -195,7 +202,7 @@ class TestEmployerLogin(unittest.TestCase):
             self.assertEqual(msg, 'Successfully logged in!')
             self.loggedToken.append(resp_dict['token'])
 
-    def tearDown(self):
+    def tearDown(self):  # delete all logged in tokens
         with app.app_context():
             employer1 = Employer.query.filter_by(email='mn20xy@leeds.ac.uk').first()
             employer2 = Employer.query.filter_by(email='198013594@qq.com').first()
@@ -205,12 +212,13 @@ class TestEmployerLogin(unittest.TestCase):
             employer3.logged = False
 
 
+# Test registering of employees
 class TestEmployeeRegister(unittest.TestCase):
-    def setUp(self) -> None:
+    def setUp(self) -> None:  # set up the app and logged in tokens
         self.app = app.test_client()
         self.app.testing = True
 
-    def test_invalid_email(self):
+    def test_invalid_email(self):  # test invalid email
         emails = ['', '123451234', 'pangyu', 'swjtu@163', 'swjtu@163.', '*&^%$#@!', '      ']
         passwords = ['123456', 'abcdef', '123abc', '123.abc', '*&^%$#@!']
         for email in emails:
@@ -224,7 +232,7 @@ class TestEmployeeRegister(unittest.TestCase):
                 status = resp_dict['status']
                 self.assertEqual(status, 402)
 
-    def test_registered_email(self):
+    def test_registered_email(self):  # test registered email
         # employee
         emails = ['mn20pl@leeds.ac.uk', 'pangyuli92@gmail.com']
         password = 'lpy..2002'
@@ -255,7 +263,7 @@ class TestEmployeeRegister(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Failed to register! Email already registered as an identity of an employer')
 
-    def test_invalid_password(self):
+    def test_invalid_password(self):  # test invalid password
         emails = ['2083097585@qq.com', '1647970332@qq.com']
         passwords = ['', '12345', 'abef', '123ac', '1.abc', 'a_very_long_password']
         for email in emails:
@@ -271,7 +279,7 @@ class TestEmployeeRegister(unittest.TestCase):
                 msg = resp_dict['msg']
                 self.assertEqual(msg, 'The length of password should be between 6 and 18!')
 
-    def test_password_not_match(self):
+    def test_password_not_match(self):  # test password not match
         emails = ['2083097585@qq.com', '1647970332@qq.com']
         password = 'lpy..2002'
         confirmedPassword = 'lpy..2003'
@@ -287,7 +295,7 @@ class TestEmployeeRegister(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'The two passwords are not the same!')
 
-    def invalid_captcha(self):
+    def invalid_captcha(self):  # test invalid captcha
         emails = ['2083097585@qq.com', '1647970332@qq.com']
         password = 'lpy..2002'
         for email in emails:
@@ -302,7 +310,7 @@ class TestEmployeeRegister(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Invalid captcha!')
 
-    def test_success(self):
+    def test_success(self):  # test success data
         emails = ['2083097585@qq.com', '1647970332@qq.com']
         password = 'lpy..2002'
         for email in emails:
@@ -321,7 +329,7 @@ class TestEmployeeRegister(unittest.TestCase):
                 msg = resp_dict['msg']
                 self.assertEqual(msg, 'Successfully registered!')
 
-    def tearDown(self) -> None:
+    def tearDown(self) -> None:  # delete the test data
         emails = ['2083097585@qq.com', '1647970332@qq.com']
         for email in emails:
             with app.app_context():
@@ -331,12 +339,13 @@ class TestEmployeeRegister(unittest.TestCase):
                     db.session.commit()
 
 
+# test registering for employers
 class TestEmployerRegister(unittest.TestCase):
-    def setUp(self) -> None:
+    def setUp(self) -> None:  # create test data
         self.app = app.test_client()
         self.app.testing = True
 
-    def test_invalid_email(self):
+    def test_invalid_email(self):  # test invalid email
         emails = ['', '123451234', 'pangyu', 'swjtu@163', 'swjtu@163.', '*&^%$#@!', '      ']
         passwords = ['123456', 'abcdef', '123abc', '123.abc', '*&^%$#@!']
         for email in emails:
@@ -350,7 +359,7 @@ class TestEmployerRegister(unittest.TestCase):
                 status = resp_dict['status']
                 self.assertEqual(status, 402)
 
-    def test_registered_email(self):
+    def test_registered_email(self):  # test registered email
         # employer
         emails = ['mn20xy@leeds.ac.uk', '198013594@qq.com']
         password = 'lpy..2002'
@@ -366,7 +375,7 @@ class TestEmployerRegister(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Failed to register! Email already registered as an identity of an employer')
 
-    def test_invalid_password(self):
+    def test_invalid_password(self):  # test invalid password
         emails = ['mn20xy@leeds.ac.uk', '198013594@qq.com']
         passwords = ['', '12345', 'abef', '123ac', '1.abc', 'a_very_long_password']
         for email in emails:
@@ -382,7 +391,7 @@ class TestEmployerRegister(unittest.TestCase):
                 msg = resp_dict['msg']
                 self.assertEqual(msg, 'The length of password should be between 6 and 18!')
 
-    def test_password_not_match(self):
+    def test_password_not_match(self):  # test password not match
         emails = ['2083097585@qq.com', '1647970332@qq.com']
         password = 'lpy..2002'
         confirmedPassword = 'lpy..2003'
@@ -398,7 +407,7 @@ class TestEmployerRegister(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'The two passwords are not the same!')
 
-    def invalid_captcha(self):
+    def invalid_captcha(self):  # test invalid captcha
         emails = ['2083097585@qq.com', '1647970332@qq.com']
         password = 'lpy..2002'
         for email in emails:
@@ -413,7 +422,7 @@ class TestEmployerRegister(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Invalid captcha!')
 
-    def test_success(self):
+    def test_success(self):  # test success data
         emails = ['2083097585@qq.com', '1647970332@qq.com']
         password = 'lpy..2002'
         for email in emails:
@@ -432,7 +441,7 @@ class TestEmployerRegister(unittest.TestCase):
                 msg = resp_dict['msg']
                 self.assertEqual(msg, 'Successfully registered!')
 
-    def tearDown(self) -> None:
+    def tearDown(self) -> None:  # delete the test data
         emails = ['2083097585@qq.com', '1647970332@qq.com']
         for email in emails:
             with app.app_context():
@@ -442,12 +451,13 @@ class TestEmployerRegister(unittest.TestCase):
                     db.session.commit()
 
 
+# test captcha getting
 class TestGetCaptcha(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # create test data
         self.app = app.test_client()
         self.app.testing = True
 
-    def test_valid_email_get_captcha(self):
+    def test_valid_email_get_captcha(self):  # test valid email
         # emails already have been registered
         emails = ['mn20pl@leeds.ac.uk', 'pangyuli92@gmail.com', 'mn20xy@leeds.ac.uk', '198013594@qq.com']
         for email in emails:
@@ -471,8 +481,9 @@ class TestGetCaptcha(unittest.TestCase):
             self.assertEqual(msg, 'Captcha has been sent to your email address!')
 
 
+# test logout for employers and employees
 class TestLogout(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # create test data
         self.app = app.test_client()
         self.app.testing = True
         with app.app_context():
@@ -508,7 +519,7 @@ class TestLogout(unittest.TestCase):
             self.loggedEmployerToken = resp_dict['token']
             self.notLoggedEmployerToken = resp_dict['token'] + '1'
 
-    def test_not_logged_in(self):
+    def test_not_logged_in(self):  # test not logged in
         # not logged - employee
         response = self.app.get('/logout/employee', headers={'authorization': self.notLoggedEmployeeToken},
                                 content_type='application/json')
@@ -527,7 +538,7 @@ class TestLogout(unittest.TestCase):
         status = resp_dict['status']
         self.assertEqual(status, 409)
 
-    def test_logged_in(self):
+    def test_logged_in(self):  # test logged in
         # logged - employee
         response = self.app.get('/logout/employee', headers={'authorization': self.loggedEmployeeToken},
                                 content_type='application/json')
@@ -550,7 +561,7 @@ class TestLogout(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'Successfully logged out!')
 
-    def tearDown(self):
+    def tearDown(self):  # delete test data
         with app.app_context():
             # loggedEmployee = Employee.query.filter_by(email='mn20pl@leeds.ac.uk').first()
             # loggedEmployee.logged = False
@@ -562,8 +573,9 @@ class TestLogout(unittest.TestCase):
                             content_type='application/json')
 
 
+# test password changing for employers and employees
 class TestChangePassword(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # create test data
         self.app = app.test_client()
         self.app.testing = True
         with app.app_context():
@@ -601,7 +613,7 @@ class TestChangePassword(unittest.TestCase):
             # notLoggedEmployer.logged = False
             # self.notLoggedEmployerToken = str('employer:') + generateToken(notLoggedEmployer.email)
 
-    def test_not_logged_in(self):
+    def test_not_logged_in(self):  # test not logged in
         response = self.app.put('/changePassword/employer', data=json.dumps({'captcha': 'aaaa', 'password': 'asdvfgh'}),
                                 headers={'Authorization': self.notLoggedEmployerToken})
         resp_json = response.data
@@ -612,7 +624,7 @@ class TestChangePassword(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'Please log in first!')
 
-    def test_invalid_captcha(self):
+    def test_invalid_captcha(self):  # test invalid captcha
         response = self.app.put('/changePassword/employer', data=json.dumps({'captcha': 'aaaa', 'password': 'asdvfgh'}),
                                 headers={'Authorization': self.loggedEmployerToken}, content_type='application/json')
         resp_json = response.data
@@ -632,7 +644,7 @@ class TestChangePassword(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'Invalid captcha!')
 
-    def test_invalid_password(self):
+    def test_invalid_password(self):  # test invalid password
         passwords = ['', '12345', '*.&', '00000', '     ', '1 2 a', 'a_very_long_long_password']
         for password in passwords:
             response = self.app.put('/changePassword/employer',
@@ -657,7 +669,7 @@ class TestChangePassword(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Invalid captcha!')
 
-    def tearDown(self) -> None:
+    def tearDown(self) -> None:  # logout
         with app.app_context():
             # loggedEmployee = Employee.query.filter_by(email='mn20pl@leeds.ac.uk').first()
             # loggedEmployee.logged = False
@@ -667,8 +679,9 @@ class TestChangePassword(unittest.TestCase):
             self.app.get('/logout/employer', headers={'Authorization': self.loggedEmployerToken}, content_type='application/json')
 
 
+# test profile changing for employees
 class TestChangeEmployeeProfile(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # setup for testing
         self.app = app.test_client()
         self.app.testing = True
         with app.app_context():
@@ -679,7 +692,7 @@ class TestChangeEmployeeProfile(unittest.TestCase):
             resp_dict = json.loads(resp_json)
             self.loggedEmployeeToken = resp_dict['token']
 
-    def test_valid(self):
+    def test_valid(self):  # test valid profile changing
         data1 = {'name': 'pangyu', 'gender': 'male', 'age': 20, 'major': 'EE',
                  'degree': 'bachelor', 'tel': '18031068094'}
         data2 = {'name': 'pangyu', 'gender': 'female', 'age': 30, 'major': 'CS',
@@ -701,7 +714,7 @@ class TestChangeEmployeeProfile(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Update profile successfully!')
 
-    def test_invalid_tel(self):
+    def test_invalid_tel(self):  # test invalid tel
         # invalid tel
         data1 = {'name': 'pangyu', 'gender': 'male', 'age': '18', 'major': 'EE',
                  'degree': 'bachelor', 'tel': 'asdfasdf'}
@@ -724,7 +737,7 @@ class TestChangeEmployeeProfile(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Invalid telephone number!')
 
-    def test_invalid_age(self):
+    def test_invalid_age(self):  # test invalid age
         # invalid age
         data1 = {'name': 'pangyu', 'gender': 'male', 'age': '-3', 'major': 'EE',
                  'degree': 'bachelor', 'tel': '18031068093'}
@@ -747,7 +760,7 @@ class TestChangeEmployeeProfile(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Invalid age!')
 
-    def test_invalid_gender(self):
+    def test_invalid_gender(self):  # invalid gender test
         data1 = {'name': 'pangyu', 'gender': '', 'age': '18', 'major': 'EE',
                  'degree': 'bachelor', 'tel': '18031068093'}
         data2 = {'name': 'pangyu', 'gender': 'mal', 'age': '20', 'major': 'EE',
@@ -767,12 +780,13 @@ class TestChangeEmployeeProfile(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Invalid gender!')
 
-    def tearDown(self) -> None:
+    def tearDown(self) -> None:  # delete the test user
         self.app.get('/employee/logout', headers={'Authorization': self.loggedEmployeeToken})
 
 
+# test resume upload/download
 class TestResume(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # set up the test
         self.app = app.test_client()
         self.app.testing = True
 
@@ -791,7 +805,7 @@ class TestResume(unittest.TestCase):
             resp_dict2 = json.loads(resp_json2)
             self.loggedEmployeeToken2 = resp_dict2['token']
 
-    def test_get_resume(self):
+    def test_get_resume(self):  # test get resume
         # has resume
         response = self.app.get('/employee/resume', headers={'Authorization': self.loggedEmployeeToken1})
         resp_json = response.data
@@ -814,7 +828,7 @@ class TestResume(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'Resume fetched successfully!')
 
-    def test_download_resume(self):
+    def test_download_resume(self):  # test download resume
         # has resume
         response = self.app.get('/employee/downloadResume', headers={'Authorization': self.loggedEmployeeToken2})
         # application/pdf
@@ -833,13 +847,14 @@ class TestResume(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'No resume uploaded!')
 
-    def tearDown(self) -> None:
+    def tearDown(self) -> None:  # delete the test user
         self.app.get('/logout/employee', headers={'Authorization': self.loggedEmployeeToken1})
         self.app.get('/logout/employee', headers={'Authorization': self.loggedEmployeeToken2})
 
 
+# test post info
 class TestPostInfo(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # set up the test
         self.app = app.test_client()
         self.app.testing = True
 
@@ -851,7 +866,7 @@ class TestPostInfo(unittest.TestCase):
             resp_dict = json.loads(resp_json)
             self.loggedEmployeeToken = resp_dict['token']
 
-    def test_invalid_post_id(self):
+    def test_invalid_post_id(self):  # test invalid post id
         ids = [0, -1, -5, 500]
         for id in ids:
             response = self.app.get('/employee/post-info?postID=' + str(id),
@@ -865,7 +880,7 @@ class TestPostInfo(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'No such post!')
 
-    def test_valid_post_id(self):
+    def test_valid_post_id(self):  # test valid post id
         ids = [1, 3, 4]
         for id in ids:
             response = self.app.get('/employee/post-info?postID=' + str(id),
@@ -879,13 +894,14 @@ class TestPostInfo(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Post fetched successfully!')
 
-    def tearDown(self) -> None:
+    def tearDown(self) -> None:  # delete the test user
         with app.app_context():
             self.app.get('/logout/employee', headers={'Authorization': self.loggedEmployeeToken})
 
 
+# test similar posts
 class TestSimilarPosts(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # set up the test
         self.app = app.test_client()
         self.app.testing = True
 
@@ -897,7 +913,7 @@ class TestSimilarPosts(unittest.TestCase):
             resp_dict = json.loads(resp_json)
             self.loggedEmployeeToken = resp_dict['token']
 
-    def test_invalid_post_id(self):
+    def test_invalid_post_id(self):   # test invalid post id
         ids = [0, -1, -5, 500]
         for id in ids:
             response = self.app.get('/employee/similar-posts?postID=' + str(id),
@@ -911,7 +927,7 @@ class TestSimilarPosts(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'No such post!')
 
-    def test_valid_post_id(self):
+    def test_valid_post_id(self):  # test valid post id
         ids = [1, 3, 4]
         for id in ids:
             response = self.app.get('/employee/similar-posts?postID=' + str(id),
@@ -925,13 +941,14 @@ class TestSimilarPosts(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'Similar posts fetched successfully!')
 
-    def tearDown(self) -> None:
+    def tearDown(self) -> None:   # delete the test
         with app.app_context():
             self.app.get('/logout/employee', headers={'Authorization': self.loggedEmployeeToken})
 
 
+# test resume sending
 class TestSendResume(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # set up the test
         self.app = app.test_client()
         self.app.testing = True
 
@@ -943,7 +960,7 @@ class TestSendResume(unittest.TestCase):
             resp_dict = json.loads(resp_json)
             self.loggedEmployeeToken = resp_dict['token']
 
-    def test_invalid_post_id(self):
+    def test_invalid_post_id(self):  # test invalid post id
         ids = [0, -1, -5, 500]
         for id in ids:
             response = self.app.post('/employee/send-resume', data=json.dumps({'postID': str(id)}),
@@ -958,7 +975,7 @@ class TestSendResume(unittest.TestCase):
             msg = resp_dict['msg']
             self.assertEqual(msg, 'No such post!')
 
-    def test_out_of_recruitment_post(self):
+    def test_out_of_recruitment_post(self):  # test out of recruitment post
         response = self.app.post('/employee/send-resume', data=json.dumps({'postID': '3'}),
                                  headers={'Authorization': self.loggedEmployeeToken}, content_type='application/json')
         resp_json = response.data
@@ -970,7 +987,7 @@ class TestSendResume(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'This post is not in recruitment!')
 
-    def test_resume_has_been_sent(self):
+    def test_resume_has_been_sent(self):  # test resume has been sent
         response = self.app.post('/employee/send-resume', data=json.dumps({'postID': '4'}),
                                  headers={'Authorization': self.loggedEmployeeToken}, content_type='application/json')
         resp_json = response.data
@@ -982,13 +999,14 @@ class TestSendResume(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'No resume uploaded! Please upload your resume first!')
 
-    def tearDown(self) -> None:
+    def tearDown(self) -> None:  # delete the test
         with app.app_context():
             self.app.get('/logout/employee', headers={'Authorization': self.loggedEmployeeToken})
 
 
+# test employer profile changing
 class TestEmployerBasicInfo(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # set up the test
         self.app = app.test_client()
         self.app.testing = True
         with app.app_context():
@@ -999,7 +1017,7 @@ class TestEmployerBasicInfo(unittest.TestCase):
             resp_dict = json.loads(resp_json)
             self.loggedEmployeeToken = resp_dict['token']
 
-    def test_not_logged_in(self):
+    def test_not_logged_in(self):  # test not logged in
         response = self.app.get('/employer/basic-info', headers={'Authorization': self.loggedEmployeeToken + '1'})
         resp_json = response.data
         resp_dict = json.loads(resp_json)
@@ -1010,7 +1028,7 @@ class TestEmployerBasicInfo(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'Please log in first!')
 
-    def test_logged_in(self):
+    def test_logged_in(self):  # test logged in
         response = self.app.get('/employer/basic-info', headers={'Authorization': self.loggedEmployeeToken})
         resp_json = response.data
         resp_dict = json.loads(resp_json)
@@ -1021,13 +1039,14 @@ class TestEmployerBasicInfo(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'Profile fetched successfully!')
 
-    def tearDown(self) -> None:
+    def tearDown(self) -> None:  # delete the test
         with app.app_context():
             self.app.get('/logout/employer', headers={'Authorization': self.loggedEmployeeToken})
 
 
+# test employer posts changing
 class TestEmployerPosts(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):   # set up the test
         self.app = app.test_client()
         self.app.testing = True
         with app.app_context():
@@ -1038,7 +1057,7 @@ class TestEmployerPosts(unittest.TestCase):
             resp_dict = json.loads(resp_json)
             self.loggedEmployerToken = resp_dict['token']
 
-    def test_new_post(self):
+    def test_new_post(self):  # test new post
         response = self.app.post('/employer/posts', data=json.dumps(
             {'title': 'unittest', 'salary': 3500, 'degree': 'Bachelor', 'label': 'C#', 'tasks': 'test',
              'requirements': 'test', 'inRecruitment': True}), headers={'Authorization': self.loggedEmployerToken},
@@ -1052,7 +1071,7 @@ class TestEmployerPosts(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'Post added successfully!')
 
-    def test_edit_post(self):
+    def test_edit_post(self):  # test edit post
         response = self.app.put('/employer/one-post', data=json.dumps({'pid': 1, 'title': 'This is a test', 'salary': 3500, 'degree': 'Bachelor', 'label': 'C#', 'tasks': 'test',
              'requirements': 'test', 'inRecruitment': True}), headers={'Authorization': self.loggedEmployerToken},
                                  content_type='application/json')
@@ -1065,7 +1084,7 @@ class TestEmployerPosts(unittest.TestCase):
         msg = resp_dict['msg']
         self.assertEqual(msg, 'Post updated successfully!')
 
-    def test_delete_post(self):
+    def test_delete_post(self):  # test delete post
         with app.app_context():
             post = Post.query.filter_by(title='unittest').first()
             response = self.app.delete('/employer/posts', data=json.dumps({'pid': post.pid}),
@@ -1085,5 +1104,6 @@ class TestEmployerPosts(unittest.TestCase):
             self.app.get('/logout/employer', headers={'Authorization': self.loggedEmployerToken}, content_type='application/json')
 
 
+# the main entrance of the test
 if __name__ == '__main__':
     unittest.main()

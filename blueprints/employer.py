@@ -11,6 +11,7 @@ from utils import verifyToken, generateToken, verifyEmployerToken, emailByTokenS
 bp = Blueprint('employer', __name__, url_prefix='/employer')
 api = Api(bp)
 
+# the parser is used to parse the request body for employers
 parser = reqparse.RequestParser()
 parser.add_argument('name', type=str, required=True, help='Name cannot be blank!')
 parser.add_argument('age', type=int, required=True, help='Age cannot be blank!')
@@ -22,23 +23,27 @@ fields = {
 
 
 class BasicInfo(Resource):
+    """
+    This class is used to get/post the basic information of an employer
+    """
     @verifyEmployerToken
     def post(self):
+        # get token from request header
         tokenStr = request.headers.get('Authorization')[9:]
-        email = emailByTokenStr(tokenStr)
-        employer = Employer.query.filter_by(email=email).first()
-        employer.name = request.json.get('name')
-        employer.CEO = request.json.get('CEO')
-        employer.researchDirection = request.json.get('researchDirection')
+        email = emailByTokenStr(tokenStr)  # get email from token
+        employer = Employer.query.filter_by(email=email).first()  # get employer from database
+        employer.name = request.json.get('name')  # update name
+        employer.CEO = request.json.get('CEO')  # update CEO
+        employer.researchDirection = request.json.get('researchDirection')  # update researchDirection
         try:
             employer.dateOfEstablishment = datetime.datetime.strptime(request.json.get('dateOfEstablishment')[:10], '%Y-%m-%d')
         except Exception as e:
             logger.error('[IP] - %s, [email] - %s, [msg] - %s' % (
                 request.remote_addr, email, 'Invalid date of establishment when updating basic info!'))
             employer.dateOfEstablishment = None
-        employer.location = request.json.get('location')
-        employer.staff = request.json.get('staff')
-        employer.introduction = request.json.get('introduction')
+        employer.location = request.json.get('location')  # update location
+        employer.staff = request.json.get('staff')  # update staff
+        employer.introduction = request.json.get('introduction')  # update introduction
         try:
             db.session.commit()
             logger.info('[IP] - %s, [email] - %s, [msg] - %s' % (
@@ -53,27 +58,32 @@ class BasicInfo(Resource):
 
     @verifyEmployerToken
     def get(self):
+        # get token from request header
         tokenStr = request.headers.get('Authorization')[9:]
-        email = emailByTokenStr(tokenStr)
-        employer = Employer.query.filter_by(email=email).first()
-        name = employer.name
-        CEO = employer.CEO
-        researchDirection = employer.researchDirection
-        dateOfEstablishment = employer.dateOfEstablishment
-        location = employer.location
-        staff = employer.staff
-        introduction = employer.introduction
+        email = emailByTokenStr(tokenStr)  # get email from token
+        employer = Employer.query.filter_by(email=email).first()  # get employer from database
+        name = employer.name  # get name
+        CEO = employer.CEO  # get CEO
+        researchDirection = employer.researchDirection  # get researchDirection
+        dateOfEstablishment = employer.dateOfEstablishment  # get dateOfEstablishment
+        location = employer.location  # get location
+        staff = employer.staff  # get staff
+        introduction = employer.introduction  # get introduction
         return jsonify({'status': 200, 'msg': 'Profile fetched successfully!', 'data':
             {'email': email, 'name': name, 'CEO': CEO, 'researchDirection': researchDirection, 'dateOfEstablishment': dateOfEstablishment, 'location': location, 'staff': staff, 'introduction': introduction}})
 
 
 class Posts(Resource):
+    """
+    This class is used to post/get/delete the posts.
+    """
     @verifyEmployerToken
     def post(self):
+        # get token from request header
         tokenStr = request.headers.get('Authorization')[9:]
-        email = emailByTokenStr(tokenStr)
-        employer = Employer.query.filter_by(email=email).first()
-        if employer.name is None:
+        email = emailByTokenStr(tokenStr)  # get email from token
+        employer = Employer.query.filter_by(email=email).first()  # get employer from database
+        if employer.name is None:   # check if the basic info is filled
             return jsonify({'status': 400, 'msg': 'Please complete your profile first!'})
         # add a new post
         title = request.json.get('title')
@@ -83,7 +93,7 @@ class Posts(Resource):
         tasks = request.json.get('tasks')
         requirements = request.json.get('requirements')
         inRecruitment = request.json.get('inRecruitment')
-        if inRecruitment == 'true':
+        if inRecruitment == 'true':  # if the post is in recruitment
             inRecruitment = True
         else:
             inRecruitment = False
@@ -102,16 +112,18 @@ class Posts(Resource):
 
     @verifyEmployerToken
     def get(self):
+        # get token from request header
         tokenStr = request.headers.get('Authorization')[9:]
-        email = emailByTokenStr(tokenStr)
-        employer = Employer.query.filter_by(email=email).first()
-        posts = Post.query.filter_by(employerId=employer.uid).all()
+        email = emailByTokenStr(tokenStr)  # get email from token
+        employer = Employer.query.filter_by(email=email).first()  # get employer from database
+        posts = Post.query.filter_by(employerId=employer.uid).all()  # get all posts of the employer
         return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': [{'ID': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment, 'receivedResumes': post.receivedResumes} for post in posts]})
 
     @verifyEmployerToken
     def delete(self):
-        post = Post.query.filter_by(pid=request.json.get('pid')).first()
-        employer = Employer.query.filter_by(uid=post.employerId).first()
+        # get token from request header
+        post = Post.query.filter_by(pid=request.json.get('pid')).first()      # get post from database
+        employer = Employer.query.filter_by(uid=post.employerId).first()      # get employer from database
         try:
             db.session.delete(post)
             db.session.commit()
@@ -126,16 +138,20 @@ class Posts(Resource):
 
 
 class OnePost(Resource):
+    """
+    This class is used to get/put one post.
+    """
     @verifyEmployerToken
     def get(self):
-        pid = request.args.get('pid')
-        post = Post.query.filter_by(pid=pid).first()
+        pid = request.args.get('pid')  # get pid from request
+        post = Post.query.filter_by(pid=pid).first()  # get post from database
         return jsonify({'status': 200, 'msg': 'Posts fetched successfully!', 'data': {'ID': post.pid, 'title': post.title, 'salary': post.salary, 'degree': post.degree, 'label': post.label, 'tasks': post.tasks, 'requirements': post.requirements, 'inRecruitment': post.inRecruitment}})
 
     @verifyEmployerToken
     def put(self):
-        pid = request.json.get('pid')
-        post = Post.query.filter_by(pid=pid).first()
+        pid = request.json.get('pid')  # get pid from request
+        post = Post.query.filter_by(pid=pid).first()  # get post from database
+        # update post
         post.title = request.json.get('title')
         post.salary = request.json.get('salary')
         post.degree = request.json.get('degree')
@@ -143,7 +159,7 @@ class OnePost(Resource):
         post.tasks = request.json.get('tasks')
         post.requirements = request.json.get('requirements')
         inRecruitment = request.json.get('inRecruitment')
-        if inRecruitment == 'true':
+        if inRecruitment == 'true':     # if the post is in recruitment
             post.inRecruitment = True
         else:
             post.inRecruitment = False
@@ -159,7 +175,8 @@ class OnePost(Resource):
             return jsonify({'status': 403, 'msg': str(e)})
 
 
+#############################################  API Defined  ###############################################
 api.add_resource(BasicInfo, '/basic-info')
 api.add_resource(Posts, '/posts')
 api.add_resource(OnePost, '/one-post')
-
+###########################################################################################################
